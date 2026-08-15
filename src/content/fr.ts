@@ -20,7 +20,7 @@ export const identity = {
   email: "[madjidcity02@gmail.com]",
   phone: "[0559130643]",
   photo: "/assets/img/photo portfolio.png",
-  //cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
+  cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
   intro:
     "Développeur informatique orienté Full Stack, Mobile, Intelligence Artificielle et Data, avec une expérience pratique à travers la conception et le développement de projets logiciels complets.",
   availability: "Ouvert aux opportunités", // à confirmer / modifier si besoin
