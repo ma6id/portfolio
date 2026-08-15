@@ -72,6 +72,17 @@ html.light .glass {
   box-shadow: 0 20px 50px -20px rgba(34, 211, 238, 0.25);
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -93,6 +104,7 @@ html.light .glass {
     linear-gradient(rgba(103,232,249,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(103,232,249,0.05) 1px, transparent 1px);
   background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 40%, transparent 100%);
   mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 40%, transparent 100%);
 }
 
