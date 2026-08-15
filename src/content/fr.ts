@@ -7,20 +7,20 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
-  domain: "[À COMPLÉTER — ex: prenom-nom.dev]",
-  url: "https://[À COMPLÉTER-domaine].com",
+  domain: "[portfolio.MAM.dev]",
+  url: "https://[portfolio.MAM].com",
 };
 
 export const identity = {
-  name: "[Nom Prénom — À COMPLÉTER]",
-  initials: "[XX]",
+  name: "MOSTEFAOUI ABD ELMADJID",
+  initials: "M.A.M",
   role1: "Développeur Full Stack",
   role2: "Intelligence Artificielle & Data",
   location: "Algérie",
-  email: "[email@à-completer.com]",
-  phone: "[À COMPLÉTER]",
-  photo: "/assets/img/profile.jpg",
-  cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
+  email: "[madjidcity02@gmail.com]",
+  phone: "[0559130643]",
+  photo: "/assets/img/photo portfolio.png",
+  //cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
   intro:
     "Développeur informatique orienté Full Stack, Mobile, Intelligence Artificielle et Data, avec une expérience pratique à travers la conception et le développement de projets logiciels complets.",
   availability: "Ouvert aux opportunités", // à confirmer / modifier si besoin
@@ -35,25 +35,42 @@ export const socials = {
 
 export const education = [
   {
-    degree: "Master en Intelligence Artificielle",
+    degree: "Master01 en Reconnaissance des Formes et Intelligence Artificielle",
     school: "Université de Chlef — Algérie",
-    period: "[À COMPLÉTER — années]",
-    status: "[À COMPLÉTER — en cours / obtenu]",
+    period: "2025 — 2026",
+    status: "en cours",
     details: [
       "Intelligence Artificielle",
       "Data Analysis",
       "Python & Pandas",
-      "Bases de données",
-      "Algorithmique",
+      "Bases de données avancées",
+      "algorithme de système distribué",
       "Informatique avancée",
+      "reconnaissance des formes",
+      "tretement d'images (matlab)",
+      "tretement du signal",
+      "tretement du langage naturel",
     ],
   },
   {
-    degree: "Formation en ingénierie logicielle / développement logiciel",
-    school: "[À COMPLÉTER — établissement]",
-    period: "[À COMPLÉTER — années]",
-    status: "[À COMPLÉTER]",
-    details: [],
+    degree: "Licence en systèmes informatiques et réseaux",
+    school: "[université de Chlef — Algérie]",
+    period: "[2019 — 2025]",
+    status: "[Certificat obtenu]",
+    details: [
+      "algorithme et structures de données (java, C, C++)",
+      "programmation web (HTML, CSS, JavaScript, PHP)",
+      "bases de données (SQL, MySQL)",
+      "réseaux informatiques (Cisco Packet Tracer)",
+      "systèmes d'exploitation ",
+      "sécurité informatique",
+      "développement d'applications mobiles (java , adroid studio)",
+      "structures machines",
+      "architecture des ordinateurs",
+      "programmation orientée objet",
+      "intelligence artificielle",
+      
+    ],
   },
 ];
 
