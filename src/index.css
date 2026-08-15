@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html.light body {
+  background: #f4f7fb;
+  color: #0d1420;
+}
+
+body {
+  @apply bg-ink-950 text-mist-100 font-body antialiased;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(59,130,246,0.10), transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(34,211,238,0.08), transparent 40%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #e6edf5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.25);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.4);
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(19,28,44,0.55), rgba(13,20,32,0.55));
+  border: 1px solid rgba(103, 232, 249, 0.10);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+html.light .glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.55));
+  border: 1px solid rgba(59,130,246,0.14);
+}
+
+.glass-hover {
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-hover:hover {
+  border-color: rgba(34, 211, 238, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px -20px rgba(34, 211, 238, 0.25);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.reveal.in-view {
+  animation: fade-up 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-[0.25em] uppercase text-cyan-300/80;
+}
+
+.tag-num {
+  @apply font-mono text-sm text-cyan-300/70;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(103,232,249,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103,232,249,0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 40%, transparent 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #67e8f9, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-azure-500 text-ink-950 font-semibold px-6 py-3 text-sm transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-full border border-mist-500/30 text-mist-100 font-medium px-6 py-3 text-sm transition-all duration-300 hover:border-cyan-300/50 hover:-translate-y-0.5;
+}
+
+.chip {
+  @apply font-mono text-[11px] tracking-wide uppercase px-2.5 py-1 rounded-full border border-cyan-300/20 text-cyan-200/90 bg-cyan-300/5;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.7);
+  outline-offset: 3px;
+}
