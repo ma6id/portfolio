@@ -31,7 +31,7 @@ export default function Gallery() {
             Identité Visuelle
           </h2>
           <p className="text-mist-300 mt-4 max-w-2xl">
-            Logos, variantes et éléments graphiques conçus pour Samumli et Lunora.
+            Logos, variantes et éléments graphiques conçus pour Samumli, Lunora et Dragon.
           </p>
         </Reveal>
 
