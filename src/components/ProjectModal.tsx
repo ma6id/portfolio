@@ -29,7 +29,7 @@ export default function ProjectModal({
       aria-label={project.name}
     >
       <div
-        className="glass w-full sm:max-w-3xl sm:rounded-3xl rounded-none min-h-screen sm:min-h-0 my-0 sm:my-8 overflow-hidden"
+        className="glass w-full sm:max-w-3xl sm:rounded-3xl rounded-none min-h-screen sm:min-h-0 my-0 sm:my-8"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 z-10 flex items-center justify-between px-6 sm:px-8 py-5 border-b border-mist-500/10 bg-ink-950 sm:rounded-t-3xl [transform:translateZ(0)] [will-change:transform]">
