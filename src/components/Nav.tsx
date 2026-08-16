@@ -52,7 +52,9 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
           <span className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 via-cyan-400 to-azure-500 flex items-center justify-center text-ink-onaccent font-bold text-base font-mono shadow-glow-sm ring-1 ring-white/20">
                {identity.name.charAt(0)}
           </span>
-          <span className="hidden sm:inline text-mist-100">{identity.name}</span>
+          <span className="text-mist-100 text-sm sm:text-lg truncate max-w-[140px] sm:max-w-none">
+            {identity.name}
+          </span>
         </button>
 
         <nav className="hidden md:flex items-center gap-1 font-mono text-sm">
