@@ -286,5 +286,5 @@ export const galleryItems: GalleryItem[] = [
 export const nav = [
   { id: "accueil", label: "Principal" },
   { id: "developpeur", label: "Développeur" },
-  { id: "identite", label: "Identité Visuelle" },
+  { id: "identite", label: "Designer" },
 ];
