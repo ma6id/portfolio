@@ -9,8 +9,8 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 relative grid md:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
         <div>
           <Reveal>
-            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-cyan-300/20 bg-cyan-300/5">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               <span className="eyebrow">{identity.availability}</span>
             </div>
           </Reveal>
@@ -68,7 +68,7 @@ export default function Hero() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-cyan-300 hover:border-cyan-300/40 transition-colors focus-ring"
+                  className="w-10 h-10 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-accent hover:border-accent/40 transition-colors focus-ring"
                 >
                   <Icon size={17} />
                 </a>

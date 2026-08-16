@@ -62,7 +62,7 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
               onClick={() => goTo(item.id)}
               className={`px-4 py-2 rounded-full transition-colors focus-ring ${
                 active === item.id
-                  ? "text-cyan-300 bg-cyan-300/10"
+                  ? "text-accent bg-accent/10"
                   : "text-mist-300 hover:text-mist-100"
               }`}
             >
@@ -75,7 +75,7 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
           <button
             onClick={toggle}
             aria-label="Changer de thème"
-            className="w-10 h-10 rounded-full border border-mist-500/30 flex items-center justify-center text-mist-300 hover:text-cyan-300 hover:border-cyan-300/40 transition-colors focus-ring"
+            className="w-10 h-10 rounded-full border border-mist-500/30 flex items-center justify-center text-mist-300 hover:text-accent hover:border-accent/40 transition-colors focus-ring"
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
@@ -100,7 +100,7 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
             <button
               key={item.id}
               onClick={() => goTo(item.id)}
-              className="text-left px-4 py-3 rounded-xl text-mist-300 hover:text-cyan-300 hover:bg-cyan-300/5 transition-colors"
+              className="text-left px-4 py-3 rounded-xl text-mist-300 hover:text-accent hover:bg-accent/5 transition-colors"
             >
               {item.label}
             </button>

@@ -48,7 +48,7 @@ export default function Contact() {
               <div className="space-y-5">
                 {items.map((it) => (
                   <div key={it.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-cyan-300/10 flex items-center justify-center text-cyan-300 shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
                       <it.icon size={17} />
                     </div>
                     <div>
@@ -60,7 +60,7 @@ export default function Contact() {
                           href={it.href}
                           target={it.href.startsWith("http") ? "_blank" : undefined}
                           rel="noreferrer"
-                          className="text-mist-100 hover:text-cyan-300 transition-colors break-all"
+                          className="text-mist-100 hover:text-accent transition-colors break-all"
                         >
                           {it.value}
                         </a>
@@ -81,34 +81,34 @@ export default function Contact() {
                   required
                   name="name"
                   placeholder="Votre nom"
-                  className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-cyan-300/50 transition-colors"
+                  className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors"
                 />
                 <input
                   required
                   type="email"
                   name="email"
                   placeholder="Votre email"
-                  className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-cyan-300/50 transition-colors"
+                  className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors"
                 />
               </div>
               <input
                 required
                 name="subject"
                 placeholder="Sujet"
-                className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-cyan-300/50 transition-colors"
+                className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors"
               />
               <textarea
                 required
                 name="message"
                 rows={5}
                 placeholder="Votre message"
-                className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-cyan-300/50 transition-colors resize-none"
+                className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors resize-none"
               />
               <button type="submit" className="btn-primary w-full justify-center">
                 <Send size={15} /> Envoyer le message
               </button>
               {sent && (
-                <p className="text-xs text-cyan-300 font-mono text-center">
+                <p className="text-xs text-accent font-mono text-center">
                   Votre client mail s'est ouvert avec le message pré-rempli.
                 </p>
               )}

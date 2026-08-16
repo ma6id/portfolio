@@ -18,7 +18,7 @@ export default function Education() {
             <Reveal key={e.degree} delay={i * 100}>
               <div className="glass glass-hover rounded-2xl p-7 h-full">
                 <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-cyan-300/10 flex items-center justify-center text-cyan-300 shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
                     <GraduationCap size={20} />
                   </div>
                   <div>

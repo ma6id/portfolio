@@ -13,6 +13,7 @@ export default {
           600: 'rgb(var(--ink-600) / <alpha-value>)',
           onaccent: '#05070d',
         },
+        accent: 'rgb(var(--accent) / <alpha-value>)',
         cyan: {
           400: '#22d3ee',
           300: '#67e8f9',

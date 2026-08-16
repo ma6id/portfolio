@@ -40,7 +40,7 @@ export default function Projects() {
                   onClick={() => setFilter(f.key)}
                   className={`font-mono text-xs px-4 py-2 rounded-full border transition-colors focus-ring ${
                     filter === f.key
-                      ? "border-cyan-300/50 text-cyan-300 bg-cyan-300/10"
+                      ? "border-accent/50 text-accent bg-accent/10"
                       : "border-mist-500/20 text-mist-300 hover:text-mist-100 hover:border-mist-500/40"
                   }`}
                 >
@@ -92,7 +92,7 @@ export default function Projects() {
                         <ExternalLink size={13} /> Démo
                       </span>
                     )}
-                    <span className="ml-auto text-xs font-mono text-cyan-300">Voir le projet →</span>
+                    <span className="ml-auto text-xs font-mono text-accent">Voir le projet →</span>
                   </div>
                 </div>
               </button>

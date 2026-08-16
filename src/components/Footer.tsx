@@ -18,7 +18,7 @@ export default function Footer() {
 
         <nav className="flex items-center gap-5 font-mono text-xs text-mist-400">
           {nav.map((n) => (
-            <button key={n.id} onClick={() => goTo(n.id)} className="hover:text-cyan-300 transition-colors">
+            <button key={n.id} onClick={() => goTo(n.id)} className="hover:text-accent transition-colors">
               {n.label}
             </button>
           ))}
@@ -36,7 +36,7 @@ export default function Footer() {
               href={href}
               target="_blank"
               rel="noreferrer"
-              className="w-9 h-9 rounded-full border border-mist-500/20 flex items-center justify-center text-mist-400 hover:text-cyan-300 hover:border-cyan-300/40 transition-colors"
+              className="w-9 h-9 rounded-full border border-mist-500/20 flex items-center justify-center text-mist-400 hover:text-accent hover:border-accent/40 transition-colors"
             >
               <Icon size={14} />
             </a>

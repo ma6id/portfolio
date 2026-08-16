@@ -41,7 +41,7 @@ export default function ProjectModal({
           <button
             onClick={onClose}
             aria-label="Fermer"
-            className="w-9 h-9 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-cyan-300 hover:border-cyan-300/40 transition-colors focus-ring shrink-0"
+            className="w-9 h-9 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-accent hover:border-accent/40 transition-colors focus-ring shrink-0"
           >
             <X size={18} />
           </button>
@@ -98,7 +98,7 @@ export default function ProjectModal({
               <ul className="grid sm:grid-cols-2 gap-2.5">
                 {project.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-mist-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 mt-1.5 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
                     {f}
                   </li>
                 ))}
@@ -126,7 +126,7 @@ export default function ProjectModal({
                   <div key={i} className="rounded-xl border border-mist-500/10 bg-ink-800/40 p-4">
                     <p className="text-xs font-mono text-mist-500 mb-1">PROBLÈME</p>
                     <p className="text-sm text-mist-300 mb-3">{c.problem}</p>
-                    <p className="text-xs font-mono text-cyan-300/70 mb-1">SOLUTION</p>
+                    <p className="text-xs font-mono text-accent/70 mb-1">SOLUTION</p>
                     <p className="text-sm text-mist-300">{c.solution}</p>
                   </div>
                 ))}

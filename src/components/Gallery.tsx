@@ -72,7 +72,7 @@ export default function Gallery() {
           <button
             onClick={() => setIndex(null)}
             aria-label="Fermer"
-            className="absolute top-6 right-6 w-10 h-10 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-cyan-300"
+            className="absolute top-6 right-6 w-10 h-10 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-accent"
           >
             <X size={18} />
           </button>
@@ -82,7 +82,7 @@ export default function Gallery() {
               setIndex((i) => (i === null ? null : (i - 1 + galleryItems.length) % galleryItems.length));
             }}
             aria-label="Précédent"
-            className="absolute left-4 sm:left-8 w-11 h-11 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-cyan-300"
+            className="absolute left-4 sm:left-8 w-11 h-11 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-accent"
           >
             <ChevronLeft size={20} />
           </button>
@@ -92,7 +92,7 @@ export default function Gallery() {
               setIndex((i) => (i === null ? null : (i + 1) % galleryItems.length));
             }}
             aria-label="Suivant"
-            className="absolute right-4 sm:right-8 w-11 h-11 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-cyan-300"
+            className="absolute right-4 sm:right-8 w-11 h-11 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-accent"
           >
             <ChevronRight size={20} />
           </button>
