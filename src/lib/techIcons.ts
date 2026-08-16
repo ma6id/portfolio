@@ -22,6 +22,7 @@ export const techIconSlugs: Record<string, string> = {
   "GitHub": "github",
   "VS Code": "visualstudiocode",
   Docker: "docker",
+  MySQL: "mysql",
   "MySQL Workbench 8.0 CE": "mysql",
   Affinity: "affinitydesigner",
   Canva: "canva",
