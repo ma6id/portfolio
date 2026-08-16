@@ -30,7 +30,15 @@ export const techIconSlugs: Record<string, string> = {
   "CapCut": "capcut",
 };
 
+export const localToolLogos: Record<string, string> = {
+  Affinity: "/assets/logos/iffinity.jpeg",
+  Canva: "/assets/logos/canva.jpeg",
+  "DaVinci Resolve": "/assets/logos/DaVinci Resolve.jpeg",
+  CapCut: "/assets/logos/CapCut.png",
+};
+
 export function getTechIconUrl(name: string): string | null {
+  if (localToolLogos[name]) return localToolLogos[name];
   const slug = techIconSlugs[name];
   return slug ? `https://cdn.simpleicons.org/${slug}` : null;
 }
