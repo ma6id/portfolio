@@ -158,8 +158,8 @@ export const projects: Project[] = [
     tagline: "Plateforme SaaS de gestion d'événements scolaires — React + FastAPI",
     categories: ["fullstack"],
     status: "🏆 1er Prix — BrainHack 2026",
-    cover: "/assets/logos/scholaria-award.jpg",
-    coverFit: "cover",
+    cover: "/assets/logos/scholaria-icon.png",
+    coverFit: "contain",
     partners: [
       { name: "Mobilis", logo: "/assets/partners/mobilis.jpg" },
       { name: "Wellmax Algérie", logo: "/assets/partners/wellmax.jpg" },
