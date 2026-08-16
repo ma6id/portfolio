@@ -40,7 +40,7 @@ export default function ShareLink() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <div className="glass rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8">
-            <div className="w-[168px] h-[168px] rounded-2xl bg-mist-100 p-2 flex items-center justify-center shrink-0">
+            <div className="w-[168px] h-[168px] rounded-2xl bg-[#e6edf5] p-2 flex items-center justify-center shrink-0">
               <canvas ref={canvasRef} />
             </div>
             <div className="flex-1 text-center sm:text-left">

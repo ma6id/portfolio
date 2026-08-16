@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-mist-500/10 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-azure-500 flex items-center justify-center text-ink-950 font-bold text-sm font-mono">
+          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-azure-500 flex items-center justify-center text-ink-onaccent font-bold text-sm font-mono">
             {identity.initials}
           </span>
           <span className="text-mist-300 text-sm">

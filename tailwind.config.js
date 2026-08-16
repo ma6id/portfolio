@@ -6,11 +6,12 @@ export default {
     extend: {
       colors: {
         ink: {
-          950: '#05070d',
-          900: '#080b14',
-          800: '#0d1420',
-          700: '#131c2c',
-          600: '#1a2537',
+          950: 'rgb(var(--ink-950) / <alpha-value>)',
+          900: 'rgb(var(--ink-900) / <alpha-value>)',
+          800: 'rgb(var(--ink-800) / <alpha-value>)',
+          700: 'rgb(var(--ink-700) / <alpha-value>)',
+          600: 'rgb(var(--ink-600) / <alpha-value>)',
+          onaccent: '#05070d',
         },
         cyan: {
           400: '#22d3ee',
@@ -21,10 +22,11 @@ export default {
           400: '#5b9bf7',
         },
         mist: {
-          100: '#e6edf5',
-          300: '#aab6c8',
-          500: '#7c8aa0',
-          700: '#4a5568',
+          100: 'rgb(var(--mist-100) / <alpha-value>)',
+          300: 'rgb(var(--mist-300) / <alpha-value>)',
+          400: 'rgb(var(--mist-400) / <alpha-value>)',
+          500: 'rgb(var(--mist-500) / <alpha-value>)',
+          700: 'rgb(var(--mist-700) / <alpha-value>)',
         },
       },
       fontFamily: {

@@ -4,6 +4,34 @@
 
 :root {
   color-scheme: dark;
+
+  --ink-950: 5 7 13;
+  --ink-900: 8 11 20;
+  --ink-800: 13 20 32;
+  --ink-700: 19 28 44;
+  --ink-600: 26 37 55;
+
+  --mist-100: 230 237 245;
+  --mist-300: 170 182 200;
+  --mist-400: 148 163 184;
+  --mist-500: 124 138 160;
+  --mist-700: 74 85 104;
+}
+
+html.light {
+  color-scheme: light;
+
+  --ink-950: 244 247 251;
+  --ink-900: 255 255 255;
+  --ink-800: 255 255 255;
+  --ink-700: 226 232 240;
+  --ink-600: 203 213 225;
+
+  --mist-100: 15 23 42;
+  --mist-300: 51 65 85;
+  --mist-400: 71 85 105;
+  --mist-500: 100 116 139;
+  --mist-700: 148 163 184;
 }
 
 * {
@@ -19,11 +47,6 @@
   }
 }
 
-html.light body {
-  background: #f4f7fb;
-  color: #0d1420;
-}
-
 body {
   @apply bg-ink-950 text-mist-100 font-body antialiased;
   background-image:
@@ -34,7 +57,7 @@ body {
 
 ::selection {
   background: rgba(34, 211, 238, 0.25);
-  color: #e6edf5;
+  color: rgb(var(--mist-100));
 }
 
 ::-webkit-scrollbar {
@@ -116,7 +139,7 @@ html.light .glass {
 }
 
 .btn-primary {
-  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-azure-500 text-ink-950 font-semibold px-6 py-3 text-sm transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5;
+  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-azure-500 text-ink-onaccent font-semibold px-6 py-3 text-sm transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5;
 }
 
 .btn-secondary {
