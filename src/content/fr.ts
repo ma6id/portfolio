@@ -281,8 +281,8 @@ export const galleryItems: GalleryItem[] = [
   { title: "Samumli — Impression", subtitle: "Version sombre", image: "/assets/logos/dark-samumli-impression.png", tag: "Dark mode" },
   { title: "Samumli", subtitle: "Icône application", image: "/assets/logos/samumli-icon.png", tag: "Icône" },
   { title: "Lunora", subtitle: "Icône application", image: "/assets/logos/lunora-icon.png", tag: "Icône" },
-  { title: "Dragon", subtitle: "Wordmark principal", image: "/assets/logos/dragon-pr.png", tag: "Branding" },
-  { title: "Dragon", subtitle: "Version sombre", image: "/assets/logos/dragon-dark.png", tag: "Dark mode" },
+  { title: "Dragon", subtitle: "Wordmark principal", image: "/assets/logos/1.png", tag: "Branding" },
+  { title: "Dragon", subtitle: "Version sombre", image: "/assets/logos/dragonBlanch.png", tag: "Branding" },
 ];
 
 export const nav = [
