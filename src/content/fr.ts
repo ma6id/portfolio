@@ -17,8 +17,8 @@ export const identity = {
   role1: "Développeur Full Stack",
   role2: "Intelligence Artificielle & Data",
   location: "Algérie",
-  email: "[madjidcity02@gmail.com]",
-  phone: "[0559130643]",
+  email: "madjidcity02@gmail.com",
+  phone: "0559130643",
   photo: "/assets/img/photo portfolio.png",
   cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
   intro:
