@@ -161,8 +161,8 @@ export const projects: Project[] = [
     cover: "/assets/logos/scholaria-icon.png",
     coverFit: "contain",
     partners: [
-      { name: "Mobilis", logo: "public/assets/logos/mobilis.jpeg" },
-      { name: "Wellmax Algérie", logo: "public/assets/logos/wellmax.jpeg" },
+      { name: "Mobilis", logo: "/assets/logos/mobilis.jpeg" },
+      { name: "Wellmax Algérie", logo: "/assets/logos/wellmax.jpeg" },
     ],
     description:
       "Scholaria est une plateforme SaaS de gestion d'événements scolaires, imaginée et développée en équipe lors du hackathon BrainHack 2026 (Infobrains Club, en partenariat avec Mobilis et Wellmax). Elle centralise la création, l'approbation, la publication et la réservation de places pour les événements internes (ateliers, compétitions, sorties, activités) au sein des établissements scolaires privés, avec une gestion des places en temps réel.",
