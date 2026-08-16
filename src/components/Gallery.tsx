@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { galleryItems } from "../content/fr";
+import { galleryItems, sectionTools } from "../content/fr";
 import Reveal from "./Reveal";
+import ToolsBadge from "./ToolsBadge";
 
 export default function Gallery() {
   const [index, setIndex] = useState<number | null>(null);
@@ -34,6 +35,9 @@ export default function Gallery() {
             Logos, variantes et éléments graphiques conçus pour Samumli, Lunora, Dragon et Scholaria.
           </p>
         </Reveal>
+        <div className="mt-4">
+          <ToolsBadge tools={sectionTools.identite} />
+        </div>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {galleryItems.map((item, i) => (

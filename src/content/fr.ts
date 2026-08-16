@@ -372,6 +372,11 @@ export const galleryItems: GalleryItem[] = [
   { title: "Scholaria", subtitle: "Icône application", image: "/assets/logos/Courbe@.png", tag: "Icône" },
 ];
 
+export const sectionTools = {
+  identite: ["Affinity", "Canva", "DaVinci Resolve", "CapCut"],
+  montage: ["DaVinci Resolve", "CapCut", "Affinity"],
+};
+
 export const nav = [
   { id: "accueil", label: "Principal" },
   { id: "developpeur", label: "Développeur" },

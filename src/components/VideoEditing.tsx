@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Play, X } from "lucide-react";
-import { videoEdits } from "../content/fr";
+import { sectionTools, videoEdits } from "../content/fr";
 import Reveal from "./Reveal";
+import ToolsBadge from "./ToolsBadge";
 
 const getYouTubeEmbedUrl = (url: string) => {
   const normalized = url.trim();
@@ -56,6 +57,9 @@ export default function VideoEditing() {
             [À COMPLÉTER — description de la section montage vidéo]
           </p>
         </Reveal>
+        <div className="mt-4">
+          <ToolsBadge tools={sectionTools.montage} />
+        </div>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {videoEdits.map((item, i) => (
