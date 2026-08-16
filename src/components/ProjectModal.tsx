@@ -33,6 +33,7 @@ export default function ProjectModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 z-10 flex items-center justify-between px-6 sm:px-8 py-5 border-b border-mist-500/10 bg-ink-950 sm:rounded-t-3xl [transform:translateZ(0)] [will-change:transform]">
+          <div>
             <p className="eyebrow">{project.status}</p>
             <h3 className="font-display font-semibold text-2xl text-mist-100 mt-1">
               {project.name}
