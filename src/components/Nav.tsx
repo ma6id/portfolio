@@ -49,8 +49,8 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
           onClick={() => goTo("accueil")}
           className="font-display font-semibold text-lg tracking-tight flex items-center gap-2 focus-ring rounded-md"
         >
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-azure-500 flex items-center justify-center text-ink-950 font-bold text-sm font-mono">
-            {identity.initials}
+          <span className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 via-cyan-400 to-azure-500 flex items-center justify-center text-ink-950 font-bold text-base font-mono shadow-glow-sm ring-1 ring-white/20">
+               {identity.name.charAt(0)}
           </span>
           <span className="hidden sm:inline text-mist-100">{identity.name}</span>
         </button>
