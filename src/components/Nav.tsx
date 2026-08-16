@@ -41,18 +41,18 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
       }`}
     >
       <div
-        className={`mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between rounded-2xl transition-all duration-300 ${
+        className={`mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between gap-3 rounded-2xl transition-all duration-300 min-w-0 ${
           scrolled ? "glass shadow-glow-sm py-2.5 px-5" : ""
         }`}
       >
         <button
           onClick={() => goTo("accueil")}
-          className="font-display font-semibold text-lg tracking-tight flex items-center gap-2 focus-ring rounded-md"
+          className="font-display font-semibold text-lg tracking-tight flex items-center gap-2 focus-ring rounded-md flex-1 min-w-0"
         >
-          <span className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 via-cyan-400 to-azure-500 flex items-center justify-center text-ink-onaccent font-bold text-base font-mono shadow-glow-sm ring-1 ring-white/20">
+          <span className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 via-cyan-400 to-azure-500 flex items-center justify-center text-ink-onaccent font-bold text-base font-mono shadow-glow-sm ring-1 ring-white/20 shrink-0">
                {identity.name.charAt(0)}
           </span>
-          <span className="text-mist-100 text-sm sm:text-lg truncate max-w-[140px] sm:max-w-none">
+          <span className="text-mist-100 text-sm sm:text-lg truncate min-w-0">
             {identity.name}
           </span>
         </button>

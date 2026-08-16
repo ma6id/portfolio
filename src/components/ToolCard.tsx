@@ -7,7 +7,7 @@ export default function ToolCard({ name }: { name: string }) {
   const [failed, setFailed] = useState(false);
 
   return (
-    <div className="glass glass-hover rounded-xl px-3.5 py-2.5 flex items-center gap-2.5 min-w-[9rem]">
+    <div className="glass glass-hover rounded-xl px-3.5 py-2.5 flex items-center gap-2.5 flex-1 min-w-[7rem] max-w-full">
       {iconUrl && !failed ? (
         <img
           src={iconUrl}
