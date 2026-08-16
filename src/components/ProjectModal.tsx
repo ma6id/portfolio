@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { ExternalLink, Github, X } from "lucide-react";
 import type { Project } from "../content/fr";
+import TechChip from "./TechChip";
 
 export default function ProjectModal({
   project,
@@ -90,9 +91,7 @@ export default function ProjectModal({
                   <span className="text-xs font-mono text-mist-500 w-40 shrink-0">{s.label}</span>
                   <div className="flex flex-wrap gap-2">
                     {s.items.map((it) => (
-                      <span key={it} className="chip">
-                        {it}
-                      </span>
+                      <TechChip key={it} name={it} />
                     ))}
                   </div>
                 </div>

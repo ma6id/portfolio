@@ -1,5 +1,6 @@
 import { skillCategories } from "../content/fr";
 import Reveal from "./Reveal";
+import TechChip from "./TechChip";
 
 export default function Skills() {
   return (
@@ -26,9 +27,7 @@ export default function Skills() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {cat.skills.map((s) => (
-                    <span key={s} className="chip">
-                      {s}
-                    </span>
+                    <TechChip key={s} name={s} />
                   ))}
                 </div>
               </div>

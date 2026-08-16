@@ -3,6 +3,7 @@ import { ExternalLink, Github, LayoutGrid } from "lucide-react";
 import { projects, type Project, type ProjectCategory } from "../content/fr";
 import Reveal from "./Reveal";
 import ProjectModal from "./ProjectModal";
+import TechChip from "./TechChip";
 
 const filters: { key: ProjectCategory | "all"; label: string }[] = [
   { key: "all", label: "Tous" },
@@ -82,9 +83,7 @@ export default function Projects() {
                       .flatMap((s) => s.items)
                       .slice(0, 4)
                       .map((t) => (
-                        <span key={t} className="chip">
-                          {t}
-                        </span>
+                        <TechChip key={t} name={t} />
                       ))}
                   </div>
                   <div className="flex items-center gap-4 mt-5 pt-4 border-t border-mist-500/10">
