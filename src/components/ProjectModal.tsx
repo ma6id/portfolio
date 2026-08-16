@@ -22,17 +22,17 @@ export default function ProjectModal({
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-ink-950/80 backdrop-blur-sm flex items-start sm:items-center justify-center p-0 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-[100] bg-ink-950/80 backdrop-blur-sm flex items-start sm:items-center justify-center p-0 sm:p-6"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-label={project.name}
     >
       <div
-        className="glass w-full sm:max-w-3xl sm:rounded-3xl rounded-none min-h-screen sm:min-h-0 my-0 sm:my-8"
+        className="glass w-full sm:max-w-3xl sm:rounded-3xl rounded-none h-screen sm:h-auto sm:max-h-[85vh] my-0 sm:my-8 flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-mist-500/10 bg-ink-950 sm:rounded-t-3xl">
+        <div className="shrink-0 flex items-center justify-between px-6 sm:px-8 py-5 border-b border-mist-500/10 bg-ink-950 sm:rounded-t-3xl">
           <div>
             <p className="eyebrow">{project.status}</p>
             <h3 className="font-display font-semibold text-2xl text-mist-100 mt-1">
@@ -48,7 +48,7 @@ export default function ProjectModal({
           </button>
         </div>
 
-        <div className="px-6 sm:px-8 py-8 space-y-9">
+        <div className="px-6 sm:px-8 py-8 space-y-9 overflow-y-auto overscroll-contain">
           <p className="text-mist-300 leading-relaxed">{project.description}</p>
 
           {project.partners && project.partners.length > 0 && (
