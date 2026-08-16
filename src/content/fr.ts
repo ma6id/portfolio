@@ -373,8 +373,8 @@ export const galleryItems: GalleryItem[] = [
 ];
 
 export const sectionTools = {
-  identite: ["Affinity", "Canva", "DaVinci Resolve", "CapCut"],
-  montage: ["DaVinci Resolve", "CapCut", "Affinity"],
+  identite: ["Affinity", "Canva"],
+  montage: ["DaVinci Resolve", "CapCut"],
 };
 
 export const nav = [
