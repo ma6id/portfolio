@@ -341,7 +341,7 @@ export const galleryItems: GalleryItem[] = [
   { title: "Dragon", subtitle: "Wordmark principal", image: "/assets/logos/1.png", tag: "Branding" },
   { title: "Dragon", subtitle: "Version sombre", image: "/assets/logos/dragonBlanch.png", tag: "Branding" },
   { title: "Scholaria", subtitle: "Wordmark principal", image: "/assets/logos/scholaria-logo.png", tag: "Branding" },
-  { title: "Scholaria", subtitle: "Icône application", image: "/assets/logos/scholaria-icon.png", tag: "Icône" },
+  { title: "Scholaria", subtitle: "Icône application", image: "/assets/logos/Courbe@.png", tag: "Icône" },
 ];
 
 export const nav = [
