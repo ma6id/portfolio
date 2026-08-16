@@ -322,6 +322,34 @@ export const processSteps = [
   { n: "06", title: "Déploiement", desc: "Publication et maintenance lorsque le projet est prêt pour la production." },
 ];
 
+export type VideoEdit = {
+  title: string;
+  description: string;
+  thumbnail: string;
+  tag: string;
+  type: "link" | "file";
+  src: string;
+};
+
+export const videoEdits: VideoEdit[] = [
+  {
+    title: "[À COMPLÉTER]",
+    description: "[À COMPLÉTER]",
+    thumbnail: "[À COMPLÉTER]",
+    tag: "[À COMPLÉTER]",
+    type: "link",
+    src: "[À COMPLÉTER — lien YouTube/Instagram]",
+  },
+  {
+    title: "[À COMPLÉTER]",
+    description: "[À COMPLÉTER]",
+    thumbnail: "[À COMPLÉTER]",
+    tag: "[À COMPLÉTER]",
+    type: "file",
+    src: "[À COMPLÉTER — chemin vers /assets/videos/xxx.mp4]",
+  },
+];
+
 export type GalleryItem = {
   title: string;
   subtitle?: string;
@@ -348,4 +376,5 @@ export const nav = [
   { id: "accueil", label: "Principal" },
   { id: "developpeur", label: "Développeur" },
   { id: "identite", label: "Designer" },
+  { id: "montage", label: "Monteur Vidéo" },
 ];

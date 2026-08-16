@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Process from "./components/Process";
 import Gallery from "./components/Gallery";
+import VideoEditing from "./components/VideoEditing";
 import Contact from "./components/Contact";
 import ShareLink from "./components/ShareLink";
 import Footer from "./components/Footer";
@@ -25,6 +26,7 @@ export default function App() {
           <Process />
         </div>
         <Gallery />
+        <VideoEditing />
         <Contact />
         <ShareLink />
       </main>
