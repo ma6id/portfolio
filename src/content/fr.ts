@@ -132,6 +132,9 @@ export type Project = {
   categories: ProjectCategory[];
   status: string;
   cover: string;
+  // "cover" = fill the card like a photo (use for real photographs).
+  // "contain" (default) = small centered icon, for transparent logo PNGs.
+  coverFit?: "cover" | "contain";
   description: string;
   problem: string;
   solution: string;
@@ -140,12 +143,66 @@ export type Project = {
   features?: string[];
   highlights: string[];
   challenges?: { problem: string; solution: string }[];
+  // Companies/organizations that sponsored or hosted the event this project
+  // was built for (e.g. a hackathon), shown as small credit badges.
+  partners?: { name: string; logo: string }[];
   github?: string;
   demo?: string;
   screenshots?: string[];
 };
 
 export const projects: Project[] = [
+  {
+    slug: "scholaria",
+    name: "Scholaria",
+    tagline: "Plateforme SaaS de gestion d'événements scolaires — React + FastAPI",
+    categories: ["fullstack"],
+    status: "🏆 1er Prix — BrainHack 2026",
+    cover: "/assets/logos/scholaria-award.jpg",
+    coverFit: "cover",
+    partners: [
+      { name: "Mobilis", logo: "/assets/partners/mobilis.jpg" },
+      { name: "Wellmax Algérie", logo: "/assets/partners/wellmax.jpg" },
+    ],
+    description:
+      "Scholaria est une plateforme SaaS de gestion d'événements scolaires, imaginée et développée en équipe lors du hackathon BrainHack 2026 (Infobrains Club, en partenariat avec Mobilis et Wellmax). Elle centralise la création, l'approbation, la publication et la réservation de places pour les événements internes (ateliers, compétitions, sorties, activités) au sein des établissements scolaires privés, avec une gestion des places en temps réel.",
+    problem:
+      "Dans les écoles privées, les événements et activités sont le plus souvent organisés via WhatsApp, formulaires papier ou tableurs Excel : aucune visibilité centralisée pour l'administration, suivi difficile des places disponibles, et communication fragmentée entre enseignants, administration et élèves.",
+    solution:
+      "Conception d'un workflow numérique complet — de la proposition d'événement par l'enseignant, à l'approbation par l'administration, jusqu'à la réservation de place par l'étudiant en temps réel — sur une architecture SaaS multi-tenant isolant les données de chaque établissement scolaire.",
+    stack: [
+      { label: "Frontend", items: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "TanStack Query"] },
+      { label: "Backend", items: ["Python", "FastAPI", "SQLAlchemy", "Pydantic", "Alembic"] },
+      { label: "Database", items: ["PostgreSQL"] },
+      { label: "Sécurité", items: ["JWT", "Role-Based Access Control", "Isolation multi-tenant (school_id)"] },
+    ],
+    roles: ["Administration (école)", "Enseignant / Organisateur d'événement", "Étudiant"],
+    features: [
+      "Workflow de demande et d'approbation d'événements",
+      "Publication automatique aux étudiants éligibles",
+      "Réservation de place en temps réel",
+      "Gestion de la capacité et des salles",
+      "Détection des conflits de planning (salle, enseignant, horaire)",
+      "Système de notifications centralisé",
+      "Tableaux de bord (administration, enseignant, étudiant)",
+      "Architecture SaaS multi-établissements (multi-tenant)",
+    ],
+    highlights: [
+      "Idée originale du projet et vision produit",
+      "Élaboration du Business Model Canvas (BMC)",
+      "Construction du plan financier",
+      "🏆 1er Prix, catégorie Éducation — BrainHack 2026",
+    ],
+    challenges: [
+      {
+        problem: "Éviter que deux étudiants réservent simultanément la dernière place disponible sur un événement à forte demande.",
+        solution: "Utilisation d'une transaction atomique côté base de données pour valider et décrémenter les places disponibles, garantissant qu'aucune double réservation n'est possible.",
+      },
+    ],
+    github: "[À COMPLÉTER — lien GitHub Scholaria]",
+    demo: "",
+    screenshots: [],
+  },
   {
     slug: "lunora",
     name: "Lunora",
@@ -283,6 +340,7 @@ export const galleryItems: GalleryItem[] = [
   { title: "Lunora", subtitle: "Icône application", image: "/assets/logos/lunora-icon.png", tag: "Icône" },
   { title: "Dragon", subtitle: "Wordmark principal", image: "/assets/logos/1.png", tag: "Branding" },
   { title: "Dragon", subtitle: "Version sombre", image: "/assets/logos/dragonBlanch.png", tag: "Branding" },
+  { title: "Scholaria", subtitle: "Wordmark principal", image: "/assets/logos/scholaria-logo.png", tag: "Branding" },
 ];
 
 export const nav = [

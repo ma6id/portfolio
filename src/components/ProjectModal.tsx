@@ -50,6 +50,27 @@ export default function ProjectModal({
         <div className="px-6 sm:px-8 py-8 space-y-9">
           <p className="text-mist-300 leading-relaxed">{project.description}</p>
 
+          {project.partners && project.partners.length > 0 && (
+            <div>
+              <p className="eyebrow mb-3">Organisé en partenariat avec</p>
+              <div className="flex flex-wrap items-center gap-3">
+                {project.partners.map((p) => (
+                  <div
+                    key={p.name}
+                    className="flex items-center gap-2 rounded-xl border border-mist-500/15 bg-ink-800/40 px-3 py-2"
+                  >
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="w-8 h-8 rounded-md object-cover shrink-0"
+                    />
+                    <span className="text-xs font-mono text-mist-300">{p.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="grid sm:grid-cols-2 gap-6">
             <div>
               <p className="eyebrow mb-2">Problème</p>

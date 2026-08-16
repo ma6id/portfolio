@@ -63,7 +63,11 @@ export default function Projects() {
                     <img
                       src={p.cover}
                       alt={p.name}
-                      className="w-24 h-24 object-contain drop-shadow-[0_0_30px_rgba(34,211,238,0.25)]"
+                      className={
+                        p.coverFit === "cover"
+                          ? "w-full h-full object-cover"
+                          : "w-24 h-24 object-contain drop-shadow-[0_0_30px_rgba(34,211,238,0.25)]"
+                      }
                     />
                   ) : (
                     <LayoutGrid className="text-mist-500" size={32} />
