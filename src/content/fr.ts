@@ -261,11 +261,11 @@ export const projects: Project[] = [
     problem:
       "[À COMPLÉTER — problème / besoin à l'origine du projet Samumli]",
     solution:
-      "Mise en place d'une architecture Full Stack classique : interface React/Vite/TypeScript côté client, API REST Node.js/Express côté serveur, et persistance des données via PostgreSQL.",
+      "Mise en place d'une architecture Full Stack classique : interface React/Vite/TypeScript côté client, API REST Node.js/Express côté serveur, et persistance des données via Supabase (PostgreSQL managé).",
     stack: [
       { label: "Frontend", items: ["React", "Vite", "TypeScript", "Tailwind CSS", "React Router", "TanStack Query"] },
       { label: "Backend", items: ["Node.js", "Express"] },
-      { label: "Database", items: ["PostgreSQL"] },
+      { label: "Database", items: ["Supabase"] },
       { label: "Autres", items: ["REST API"] },
     ],
     features: [
@@ -276,7 +276,7 @@ export const projects: Project[] = [
     highlights: [
       "Architecture React + Node.js/Express + PostgreSQL",
       "API REST construite de bout en bout",
-      "Démontre une stack complémentaire à Lunora (Flutter/Supabase)",
+      "Démontre une architecture avec backend applicatif dédié (Node.js/Express), complémentaire à l'usage direct de Supabase (Backend-as-a-Service) sur Lunora",
     ],
     challenges: [
       {
