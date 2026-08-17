@@ -101,6 +101,7 @@ export const skillCategories: SkillCategory[] = [
     eyebrow: "Data & Storage",
     skills: [
       "PostgreSQL",
+      "MySQL Workbench 8.0 CE",
       "SQL",
       "Supabase",
       "Database design",
@@ -119,7 +120,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Outils",
     eyebrow: "Workflow",
-    skills: ["Git", "GitHub", "VS Code", "[À COMPLÉTER — autres outils]"],
+    skills: ["Git", "GitHub", "VS Code", "Docker"],
   },
 ];
 
