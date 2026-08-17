@@ -15,14 +15,14 @@ export const identity = {
   name: "MOSTEFAOUI ABD ELMADJID",
   initials: "M.A.M",
   role1: "Développeur Full Stack",
-  role2: "Intelligence Artificielle & Data",
+  role2: "Conseil technique pour startups & entreprises",
   location: "Algérie",
   email: "madjidcity02@gmail.com",
   phone: "0559130643",
   photo: "/assets/img/photo portfolio.png",
   cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
   intro:
-    "Développeur informatique orienté Full Stack, Mobile, Intelligence Artificielle et Data, avec une expérience pratique à travers la conception et le développement de projets logiciels complets.",
+    "J'accompagne les startups et les entreprises dans la résolution de leurs défis techniques et stratégiques — de la conception à la mise en production. Fort d'une solide expérience en développement Full Stack (React, Node.js, Flutter), en analyse de données et en intelligence artificielle, j'interviens également sur la création d'identités visuelles, de plans financiers et de modèles économiques pour accompagner les projets naissants dans leur structuration globale. Que vous ayez un problème technique précis ou un projet à faire décoller, je vous accompagne avec rigueur à chaque étape.",
   availability: "Ouvert aux opportunités", // à confirmer / modifier si besoin
 };
 
