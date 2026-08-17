@@ -58,11 +58,16 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        drift: {
+          '0%, 100%': { backgroundPosition: '0% 0%' },
+          '50%': { backgroundPosition: '100% 100%' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
         blink: 'blink 1s step-start infinite',
         float: 'float 6s ease-in-out infinite',
+        drift: 'drift 12s ease-in-out infinite',
       },
     },
   },

@@ -16,7 +16,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="font-display font-semibold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-tight text-mist-100 max-w-full break-words">
+            <h1 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl leading-[1.1] tracking-tight text-mist-100">
               {identity.role1}
               <br />
               <span className="text-gradient">{identity.role2}</span>
@@ -24,7 +24,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-6 text-mist-300 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="mt-6 text-mist-300 text-sm sm:text-base leading-relaxed max-w-xl">
               {identity.intro}
             </p>
           </Reveal>
@@ -80,12 +80,22 @@ export default function Hero() {
         <Reveal delay={200} className="relative">
           <div className="relative mx-auto max-w-sm">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-cyan-400/20 to-azure-500/10 blur-2xl" />
-            <div className="relative glass rounded-[2rem] p-3 shadow-glow animate-float">
+            <div className="relative glass rounded-[2rem] p-3 shadow-glow animate-float overflow-hidden">
+              <div
+                className="absolute inset-0 opacity-20 bg-grid-pattern bg-[length:28px_28px] animate-drift pointer-events-none"
+                aria-hidden="true"
+              />
               <img
                 src={identity.photo}
                 alt={identity.name}
-                className="rounded-[1.5rem] w-full aspect-[4/5] object-cover"
+                className="relative rounded-[1.5rem] w-full aspect-[4/5] object-cover"
               />
+              <div className="absolute top-4 right-4 font-mono text-[10px] text-cyan-300/60 animate-pulse" aria-hidden="true">
+                {'</>'}
+              </div>
+              <div className="absolute bottom-6 left-4 font-mono text-[9px] text-cyan-300/40 animate-pulse" style={{ animationDelay: '0.6s' }} aria-hidden="true">
+                01 10 11
+              </div>
             </div>
 
             <div className="absolute -left-6 top-8 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block">
