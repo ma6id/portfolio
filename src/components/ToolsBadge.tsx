@@ -10,8 +10,8 @@ export default function ToolsBadge({ tools, label = "Outils" }: ToolsBadgeProps)
   if (!tools?.length) return null;
   return (
     <div className="mt-6">
-      <p className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-mist-500 mb-2.5">
-        <Wrench size={12} />
+      <p className="flex items-center gap-2 font-display font-semibold text-xl sm:text-2xl text-mist-100 mb-4">
+        <Wrench size={20} className="text-accent" />
         {label}
       </p>
       <div className="flex flex-wrap gap-3">

@@ -61,10 +61,12 @@ export default function VideoEditing() {
           <ToolsBadge tools={sectionTools.montage} />
         </div>
 
-        <p className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-mist-500 mb-3">
-          <Video size={12} />
-          Vidéo
-        </p>
+        <div className="mt-10">
+          <p className="flex items-center gap-2 font-display font-semibold text-xl sm:text-2xl text-mist-100 mb-4">
+            <Video size={20} className="text-accent" />
+            Vidéo
+          </p>
+        </div>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {videoEdits.map((item, i) => (
