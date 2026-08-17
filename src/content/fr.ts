@@ -215,7 +215,8 @@ export const projects: Project[] = [
     status: "Projet en développement",
     cover: "/assets/logos/lunora-icon.png",
     description:
-      "Lunora est une marketplace mobile Flutter/Supabase dédiée au secteur du mariage et de la beauté en Algérie, couvrant les 58 wilayas du pays. La plateforme connecte clients, vendeurs, spécialistes beauté et livreurs autour d'un modèle multi-rôles complet.",
+      "Lunora est une marketplace pensée pour le marché algérien, dédiée au mariage, à la mode nuptiale et à la beauté : vente, location, paiement par échéances, services beauté et livraison.",
+
     problem:
       "En Algérie, le secteur du mariage et de la beauté manque d'une plateforme unifiée fiable reliant vendeurs, clients, prestataires beauté et livraison, avec une gestion centralisée des rôles, des transactions et des commissions.",
     solution:
