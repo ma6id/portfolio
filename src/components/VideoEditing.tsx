@@ -61,7 +61,7 @@ export default function VideoEditing() {
           <ToolsBadge tools={sectionTools.montage} />
         </div>
 
-        <p className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wide text-mist-500 mb-3">
+        <p className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wide text-mist-500 mb-3">
           <Video size={12} />
           Vidéo
         </p>
