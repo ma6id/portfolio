@@ -210,38 +210,36 @@ export const projects: Project[] = [
   {
     slug: "lunora",
     name: "Lunora",
-    tagline: "Marketplace mariage, mode nuptiale & beauté — Flutter + Supabase",
+    tagline: "Marketplace multi-rôles pour le mariage et la beauté en Algérie",
     categories: ["mobile", "fullstack"],
     status: "Projet en développement",
     cover: "/assets/logos/lunora-icon.png",
     description:
-      "Lunora est une marketplace pensée pour le marché algérien, dédiée au mariage, à la mode nuptiale et à la beauté : vente, location, paiement par échéances, services beauté et livraison.",
+      "Lunora est une marketplace mobile Flutter/Supabase dédiée au secteur du mariage et de la beauté en Algérie, couvrant les 58 wilayas du pays. La plateforme connecte clients, vendeurs, spécialistes beauté et livreurs autour d'un modèle multi-rôles complet.",
     problem:
-      "Le secteur du mariage en Algérie manque d'une plateforme unifiée reliant vendeurs, prestataires beauté, clients et livraison, avec une gestion fiable des rôles et des transactions.",
+      "En Algérie, le secteur du mariage et de la beauté manque d'une plateforme unifiée fiable reliant vendeurs, clients, prestataires beauté et livraison, avec une gestion centralisée des rôles, des transactions et des commissions.",
     solution:
-      "Conception d'une architecture multi-rôles (client, vendeur, spécialiste beauté, livreur, administrateur) sur une base Flutter côté mobile et Supabase/PostgreSQL côté backend, avec une sécurité gérée au niveau de la base de données via des politiques RLS.",
+      "Une marketplace multi-rôles (client, vendeur, spécialiste beauté, livreur, administrateur) construite en Clean Architecture sur Flutter/Supabase, avec authentification sécurisée par CAPTCHA, interface trilingue (arabe RTL, français, anglais), et gestion automatique de la commission de plateforme (8%).",
     stack: [
       { label: "Frontend / Mobile", items: ["Flutter", "Dart", "Riverpod", "GoRouter"] },
-      { label: "Backend / Database", items: ["Supabase", "PostgreSQL", "SQL"] },
-      { label: "Sécurité", items: ["Authentication", "Role-Based Access Control", "Row Level Security (RLS)", "Permissions & Grants"] },
+      { label: "Backend / Database", items: ["Supabase", "PostgreSQL", "Row Level Security (RLS)"] },
+      { label: "Sécurité", items: ["Authentication", "Cloudflare Turnstile (CAPTCHA)", "Role-Based Access Control"] },
     ],
-    roles: ["Customer", "Seller", "Beauty Specialist", "Delivery Agent", "Administrator"],
+    roles: ["Client", "Vendeur", "Spécialiste beauté", "Livreur", "Administrateur"],
     features: [
-      "Marketplace multi-catégories (produits, looks)",
-      "Panier, commandes, vente et location",
-      "Paiement par échéances",
-      "Réservation de services beauté",
-      "Livraison et suivi",
-      "Authentification et gestion des rôles",
-      "Back-office administrateur",
+      "Marketplace multi-catégories (produits, looks complets)",
+      "Achat, paiement par échéances et location de produits",
+      "Réservation de services beauté (maquillage, coiffure)",
+      "Suivi de livraison par province",
+      "Interface trilingue (arabe RTL, français, anglais)",
+      "Calcul automatique de la commission de plateforme (8%)",
     ],
     highlights: [
-      "Conception d'une architecture multi-rôles",
-      "Intégration Flutter avec Supabase",
-      "Conception et exploitation d'une base PostgreSQL",
-      "Mise en place de politiques RLS",
-      "Gestion des permissions et des accès",
-      "Logique métier marketplace (vente + location + échéances)",
+      "Conception d'une architecture multi-rôles en Clean Architecture (Flutter/Riverpod)",
+      "Intégration Supabase complète (Auth, RLS, base de données PostgreSQL)",
+      "Mise en place d'une protection anti-bot via Cloudflare Turnstile",
+      "Interface trilingue avec gestion des 58 wilayas algériennes comme source de données unique",
+      "Gestion automatisée des commissions et des rôles utilisateurs",
     ],
     challenges: [
       {
@@ -249,10 +247,11 @@ export const projects: Project[] = [
         solution: "[À COMPLÉTER — la solution technique apportée]",
       },
     ],
-    github: "[À COMPLÉTER — lien GitHub Lunora]",
-    demo: "", // application mobile en préparation — pas encore de démo publique
+    github: "https://github.com/ma6id/Lunora",
+    demo: "",
     screenshots: [],
   },
+
   {
     slug: "samumli",
     name: "Samumli",
