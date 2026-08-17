@@ -256,31 +256,36 @@ export const projects: Project[] = [
   {
     slug: "samumli",
     name: "Samumli",
-    tagline: "Marketplace Print-on-Demand — React + Node.js/Express",
+    tagline: "Marketplace algérienne d'impression à la demande",
     categories: ["fullstack"],
     status: "Déployé",
     cover: "/assets/logos/samumli-icon.png",
     description:
-      "Samumli est une plateforme de marketplace / Print-on-Demand, construite avec une stack React + Node.js différente de Lunora, afin de démontrer une capacité à travailler dans plusieurs environnements Full Stack.",
+      "SAMUMLI est une marketplace algérienne d'impression à la demande qui connecte les clients aux imprimeries et librairies locales. Le modèle repose sur des points de retrait fixes : le client commande en ligne et récupère sa commande à l'imprimerie participante la plus proche, sans attente de livraison.",
     problem:
-      "[À COMPLÉTER — problème / besoin à l'origine du projet Samumli]",
+      "En Algérie, commander une impression personnalisée impose souvent de se déplacer physiquement chez un imprimeur, sans visibilité sur les prix, les délais ou la disponibilité, et sans solution numérique centralisée reliant clients et imprimeries locales.",
     solution:
-      "Mise en place d'une architecture Full Stack classique : interface React/Vite/TypeScript côté client, API REST Node.js/Express côté serveur, et persistance des données via Supabase (PostgreSQL managé).",
+      "Une marketplace avec quatre rôles distincts (client, imprimerie, imprimerie principale, administration), où le client commande en ligne et retire sa commande dans l'imprimerie participante la plus proche — un modèle de retrait plutôt que de livraison, avec suivi de commande en temps réel via Supabase Realtime.",
     stack: [
-      { label: "Frontend", items: ["React", "Vite", "TypeScript", "Tailwind CSS", "React Router", "TanStack Query"] },
-      { label: "Backend", items: ["Node.js", "Express"] },
-      { label: "Database", items: ["Supabase"] },
-      { label: "Autres", items: ["REST API"] },
+      { label: "Frontend", items: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Leaflet"] },
+      { label: "Backend / Database", items: ["Supabase", "PostgreSQL", "Row Level Security (RLS)", "Realtime"] },
+      { label: "Intégrations", items: ["Yalidine", "Maystro", "Procolis", "Zaki Express"] },
     ],
+    roles: ["Client", "Imprimerie (Print Shop)", "Imprimerie principale", "Administration"],
     features: [
-      "Catalogue produits Print-on-Demand",
-      "Parcours d'achat",
-      "[À COMPLÉTER — autres fonctionnalités réelles]",
+      "Marketplace multi-imprimeries avec retrait en point fixe",
+      "Tableaux de bord par rôle (client, imprimerie, imprimerie principale, administration)",
+      "Suivi de commande en temps réel (Supabase Realtime)",
+      "Gestion du cycle de vie complet des commandes",
+      "Intégration de transporteurs algériens (Yalidine, Maystro, Procolis, Zaki Express)",
+      "Interface en arabe (RTL) avec prix en Dinar Algérien (DA)",
     ],
     highlights: [
-      "Architecture React + Node.js/Express + PostgreSQL",
-      "API REST construite de bout en bout",
-      "Démontre une architecture avec backend applicatif dédié (Node.js/Express), complémentaire à l'usage direct de Supabase (Backend-as-a-Service) sur Lunora",
+      "Conception d'une architecture multi-rôles avec routing et dashboards séparés",
+      "Intégration Supabase complète (Auth, Realtime, RLS sur 21 tables)",
+      "Mise en place du modèle de retrait en point fixe (différenciateur clé du marché)",
+      "Intégration de 4 transporteurs algériens pour la logistique",
+      "Interface RTL en arabe avec identité visuelle dédiée (Tajawal, couleurs #E67E22 / #C0392B)",
     ],
     challenges: [
       {
@@ -288,10 +293,11 @@ export const projects: Project[] = [
         solution: "[À COMPLÉTER — la solution technique apportée]",
       },
     ],
-    github: "[À COMPLÉTER — lien GitHub Samumli]",
-    demo: "https://smart-on-demand-printing-samumli.vercel.app/",
+    github: "https://github.com/ma6id/Smart_on-demand_printing_SAMUMLI",
+    demo: "https://samumli.vercel.app",
     screenshots: [],
   },
+
   {
     slug: "data-analysis",
     name: "Data Analysis",
