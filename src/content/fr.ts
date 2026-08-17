@@ -150,6 +150,7 @@ export type Project = {
   github?: string;
   demo?: string;
   screenshots?: string[];
+  awardImage?: string;
 };
 
 export const projects: Project[] = [
@@ -204,6 +205,7 @@ export const projects: Project[] = [
     github: "[À COMPLÉTER — lien GitHub Scholaria]",
     demo: "",
     screenshots: [],
+    awardImage: "/assets/awards/scholaria-brainhack.jpg",
   },
   {
     slug: "lunora",

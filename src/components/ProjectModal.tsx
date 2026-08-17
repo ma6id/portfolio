@@ -130,9 +130,20 @@ export default function ProjectModal({
             <p className="eyebrow mb-3">Ce que j'ai réalisé</p>
             <ul className="space-y-2.5">
               {project.highlights.map((h) => (
-                <li key={h} className="flex items-start gap-2 text-sm text-mist-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-azure-400 mt-1.5 shrink-0" />
-                  {h}
+                <li key={h} className="flex items-start justify-between gap-3 text-sm text-mist-300">
+                  <span className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-azure-400 mt-1.5 shrink-0" />
+                    {h}
+                  </span>
+                  {h.includes("🏆") && project.awardImage && (
+                    <a href={project.awardImage} target="_blank" rel="noreferrer" className="shrink-0">
+                      <img
+                        src={project.awardImage}
+                        alt="Photo du prix"
+                        className="w-16 h-16 rounded-lg object-cover border border-mist-500/15 hover:border-accent/40 transition-colors"
+                      />
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
