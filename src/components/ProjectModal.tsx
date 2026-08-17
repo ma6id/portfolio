@@ -53,7 +53,7 @@ export default function ProjectModal({
 
           {project.partners && project.partners.length > 0 && (
             <div>
-              <p className="eyebrow mb-3">Organisé en partenariat avec</p>
+              <p className="eyebrow mb-3">Récompensé par</p>
               <div className="flex flex-wrap items-center gap-3">
                 {project.partners.map((p) => (
                   <div
