@@ -69,11 +69,15 @@ export default function VideoEditing() {
                 className="group text-left w-full glass glass-hover rounded-2xl overflow-hidden focus-ring"
               >
                 <div className="relative aspect-[16/10] bg-ink-800/70 overflow-hidden">
-                  <img
-                    src={item.thumbnail}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {item.thumbnail ? (
+                    <img
+                      src={item.thumbnail}
+                      alt={item.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <video src={item.src} muted preload="metadata" className="h-full w-full object-cover" />
+                  )}
                   <div className="absolute inset-0 flex items-center justify-center bg-ink-950/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/60 bg-ink-900/60 text-mist-100">
                       <Play size={18} className="ml-0.5" fill="currentColor" />

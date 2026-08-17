@@ -334,20 +334,12 @@ export type VideoEdit = {
 
 export const videoEdits: VideoEdit[] = [
   {
-    title: "[À COMPLÉTER]",
-    description: "[À COMPLÉTER]",
-    thumbnail: "[À COMPLÉTER]",
-    tag: "[À COMPLÉTER]",
-    type: "link",
-    src: "[À COMPLÉTER — lien YouTube/Instagram]",
-  },
-  {
-    title: "[À COMPLÉTER]",
-    description: "[À COMPLÉTER]",
-    thumbnail: "[À COMPLÉTER]",
-    tag: "[À COMPLÉTER]",
+    title: "Tournoi amical de boxe — Inno Gym",
+    description: "Vidéo de montage réalisée à l'occasion d'un tournoi amical de boxe organisé à la salle de sport Inno Gym. Prise de vue au smartphone, montage sur CapCut.",
+    thumbnail: "",
+    tag: "Sport",
     type: "file",
-    src: "[À COMPLÉTER — chemin vers /assets/videos/xxx.mp4]",
+    src: "/assets/video/0329-web.mp4",
   },
 ];
 
