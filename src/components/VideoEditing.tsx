@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Play, X } from "lucide-react";
+import { Play, X, Video } from "lucide-react";
 import { sectionTools, videoEdits } from "../content/fr";
 import Reveal from "./Reveal";
 import ToolsBadge from "./ToolsBadge";
@@ -54,12 +54,17 @@ export default function VideoEditing() {
           <p className="eyebrow mb-3">Montage & motion</p>
           <h2 className="font-display font-semibold text-3xl sm:text-4xl text-mist-100">Monteur Vidéo</h2>
           <p className="text-mist-300 mt-4 max-w-2xl">
-            [À COMPLÉTER — description de la section montage vidéo]
+            Je ne peux pas exposer l'ensemble de mes réalisations par respect de la confidentialité de mes clients.
           </p>
         </Reveal>
         <div className="mt-4">
           <ToolsBadge tools={sectionTools.montage} />
         </div>
+
+        <p className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wide text-mist-500 mb-3">
+          <Video size={12} />
+          Vidéo
+        </p>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {videoEdits.map((item, i) => (
@@ -168,7 +173,13 @@ export default function VideoEditing() {
               })()}
 
               {selected.type === "file" && (
-                <video controls className="w-full rounded-xl" preload="metadata">
+                <video
+                  controls
+                  controlsList="nodownload"
+                  onContextMenu={(e) => e.preventDefault()}
+                  className="w-full rounded-xl"
+                  preload="metadata"
+                >
                   <source src={selected.src} />
                 </video>
               )}
