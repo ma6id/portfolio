@@ -161,8 +161,8 @@ export const projects: Project[] = [
     cover: "/assets/logos/scholaria-icon.png",
     coverFit: "contain",
     partners: [
-      { name: "Mobilis", logo: "/assets/partners/mobilis.jpeg" },
-      { name: "Wellmax Algérie", logo: "/assets/partners/wellmax.jpeg" },
+      { name: "Mobilis", logo: "/assets/logos/mobilis.jpeg" },
+      { name: "Wellmax Algérie", logo: "/assets/logos/wellmax.jpeg" },
       { name: "Infobrains UHBC", logo: "/assets/logos/infobrains.png" },
     ],
     description:
