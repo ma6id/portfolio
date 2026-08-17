@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ExternalLink, Github, X } from "lucide-react";
 import type { Project } from "../content/fr";
 import TechChip from "./TechChip";
@@ -19,6 +19,8 @@ export default function ProjectModal({
       window.removeEventListener("keydown", onKey);
     };
   }, [onClose]);
+
+  const [awardOpen, setAwardOpen] = useState(false);
 
   return (
     <div
@@ -136,13 +138,17 @@ export default function ProjectModal({
                     {h}
                   </span>
                   {h.includes("🏆") && project.awardImage && (
-                    <a href={project.awardImage} target="_blank" rel="noreferrer" className="shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => setAwardOpen(true)}
+                      className="shrink-0 focus-ring rounded-lg"
+                    >
                       <img
                         src={project.awardImage}
                         alt="Photo du prix"
                         className="w-16 h-16 rounded-lg object-cover border border-mist-500/15 hover:border-accent/40 transition-colors"
                       />
-                    </a>
+                    </button>
                   )}
                 </li>
               ))}
@@ -183,6 +189,28 @@ export default function ProjectModal({
             )}
           </div>
         </div>
+
+        {awardOpen && project.awardImage && (
+          <div
+            className="fixed inset-0 z-[200] bg-ink-950/90 backdrop-blur-md flex items-center justify-center p-6"
+            onClick={() => setAwardOpen(false)}
+          >
+            <div className="relative max-w-md w-full" onClick={(e) => e.stopPropagation()}>
+              <button
+                onClick={() => setAwardOpen(false)}
+                aria-label="Fermer"
+                className="absolute -top-10 right-0 w-9 h-9 rounded-full border border-mist-500/25 flex items-center justify-center text-mist-300 hover:text-accent hover:border-accent/40 transition-colors focus-ring"
+              >
+                <X size={18} />
+              </button>
+              <img
+                src={project.awardImage}
+                alt="Photo du prix"
+                className="w-full rounded-2xl shadow-glow"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
