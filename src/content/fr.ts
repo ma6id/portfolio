@@ -22,7 +22,7 @@ export const identity = {
   photo: "/assets/img/photo portfolio.png",
   cvUrl: "[À COMPLÉTER — lien vers le CV en PDF]",
   intro:
-    "J'accompagne les startups et les entreprises dans la résolution de leurs défis techniques et stratégiques — de la conception à la mise en production. Fort d'une solide expérience en développement Full Stack (React, Node.js, Flutter), en analyse de données et en intelligence artificielle, j'interviens également sur la création d'identités visuelles, de plans financiers et de modèles économiques pour accompagner les projets naissants dans leur structuration globale. Que vous ayez un problème technique précis ou un projet à faire décoller, je vous accompagne avec rigueur à chaque étape.",
+    "J'accompagne les startups et les entreprises établies dans la résolution de leurs défis techniques et stratégiques, de la conception à la production. Fort d'une vaste expérience en développement logiciel intégré (React, Node.js, Flutter), en analyse de données et en intelligence artificielle, je contribue également à la conception de l'identité visuelle, à la planification financière et au développement du modèle économique afin d'aider ces structures dans leur croissance globale. Qu'il s'agisse d'un problème technique spécifique ou d'un projet à lancer, je vous offre un soutien complet à chaque étape.",
   availability: "Ouvert aux opportunités", // à confirmer / modifier si besoin
 };
 
