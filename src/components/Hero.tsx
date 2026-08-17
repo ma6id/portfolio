@@ -79,12 +79,12 @@ export default function Hero() {
 
         <Reveal delay={200} className="relative">
           <div className="relative mx-auto max-w-sm">
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-cyan-400/20 to-azure-500/10 blur-2xl" />
+            <div
+              className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-cyan-400/25 to-azure-500/15 bg-grid-pattern bg-[length:32px_32px] blur-xl animate-drift"
+              aria-hidden="true"
+            />
+            <div className="absolute -inset-1 rounded-[2.1rem] bg-gradient-to-br from-cyan-400/40 via-transparent to-azure-500/40 blur-md animate-pulse" aria-hidden="true" />
             <div className="relative glass rounded-[2rem] p-3 shadow-glow animate-float overflow-hidden">
-              <div
-                className="absolute inset-0 opacity-20 bg-grid-pattern bg-[length:28px_28px] animate-drift pointer-events-none"
-                aria-hidden="true"
-              />
               <img
                 src={identity.photo}
                 alt={identity.name}
