@@ -132,7 +132,7 @@ export default function ProjectModal({
             <p className="eyebrow mb-3">Ce que j'ai réalisé</p>
             <ul className="space-y-2.5">
               {project.highlights.map((h) => (
-                <li key={h} className="flex items-start justify-between gap-3 text-sm text-mist-300">
+                <li key={h} className="flex items-center justify-between gap-3 text-sm text-mist-300">
                   <span className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-azure-400 mt-1.5 shrink-0" />
                     {h}
