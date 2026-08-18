@@ -306,7 +306,7 @@ export const projects: Project[] = [
     tagline: "Exploration, visualisation et modélisation prédictive sur un dataset de ventes de jeux vidéo",
     categories: ["data"],
     status: "Travail Pratique",
-    cover: "/assets/image/darta_analyse.png",
+    cover: "/assets/image/data-analysis-cover.svg",
     description:
       "Travail pratique de Data Analysis avec Python et Jupyter Notebook, mené sur un dataset de ventes mondiales de jeux vidéo (plateforme, genre, éditeur, ventes par région). Le projet couvre l'ensemble du pipeline d'analyse : exploration, nettoyage, visualisation, réduction de dimensionnalité par PCA, et modélisation prédictive par régression linéaire.",
     problem:
