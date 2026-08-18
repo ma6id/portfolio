@@ -244,8 +244,10 @@ export const projects: Project[] = [
     ],
     challenges: [
       {
-        problem: "[À COMPLÉTER — un problème technique réellement rencontré sur Lunora]",
-        solution: "[À COMPLÉTER — la solution technique apportée]",
+        problem:
+          "La politique de sécurité au niveau des lignes (RLS) sur la table des profils utilisateurs vérifiait le rôle d'un utilisateur en consultant cette même table — créant une boucle infinie : pour vérifier si l'accès était autorisé, le système devait d'abord accéder à la table, ce qui déclenchait à nouveau la même vérification.",
+        solution:
+          "Création d'une fonction de vérification dédiée, exécutée avec des privilèges élevés indépendants de la politique de sécurité standard. Cette fonction peut consulter directement le rôle de l'utilisateur sans déclencher la boucle de vérification, débloquant ainsi l'accès de façon fiable et instantanée.",
       },
     ],
     github: "https://github.com/ma6id/Lunora",
