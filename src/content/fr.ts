@@ -314,8 +314,8 @@ export const projects: Project[] = [
     solution:
       "Un pipeline complet d'analyse de données : nettoyage et exploration (Pandas), visualisations statistiques (Matplotlib/Seaborn) pour identifier les tendances et corrélations, standardisation des variables, réduction de dimensionnalité par PCA pour synthétiser l'information, puis un modèle de régression linéaire (Scikit-learn) pour prédire les ventes globales à partir des variables disponibles.",
     stack: [
-      { label: "Langage", items: ["Python"] },
-      { label: "Data", items: ["Pandas", "NumPy"] },
+      { label: "Langage", items: ["Python", "Jupyter Notebook"] },
+      { label: "Data", items: ["Pandas", "NumPy", "CSV"] },
       { label: "Visualisation", items: ["Matplotlib", "Seaborn"] },
       { label: "Machine Learning", items: ["Scikit-learn"] },
     ],
@@ -326,6 +326,8 @@ export const projects: Project[] = [
       "Réduction de dimensionnalité par PCA (2 composantes principales)",
       "Modèle de régression linéaire pour prédire les ventes globales",
       "Évaluation du modèle (R², RMSE)",
+      "Séparation des données en ensembles d'entraînement et de test (train/test split)",
+      "Interprétation des résultats et synthèse des conclusions",
     ],
     highlights: [
       "Analyse exploratoire complète avec visualisations statistiques (distribution, corrélations)",
