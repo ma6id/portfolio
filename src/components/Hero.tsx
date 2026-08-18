@@ -1,4 +1,4 @@
-import { ArrowRight, Github, Instagram, Facebook, Mail } from "lucide-react";
+import { ArrowRight, Github, Instagram, Facebook, Mail, Code2, Braces, TerminalSquare } from "lucide-react";
 import { identity, socials } from "../content/fr";
 import Reveal from "./Reveal";
 
@@ -79,6 +79,21 @@ export default function Hero() {
 
         <Reveal delay={200} className="relative">
           <div className="relative mx-auto max-w-sm">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[125%] aspect-square rounded-full bg-radial-glow animate-glow-pulse pointer-events-none" aria-hidden="true" />
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] aspect-square rounded-full bg-gradient-to-br from-cyan-400/30 via-azure-500/10 to-transparent blur-2xl pointer-events-none" aria-hidden="true" />
+
+            <div className="hidden sm:flex items-center justify-center absolute -left-2 top-2 w-12 h-12 rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-a">
+              <Code2 size={20} className="text-cyan-300" />
+            </div>
+
+            <div className="hidden sm:flex items-center justify-center absolute -right-3 top-16 w-12 h-12 rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-b">
+              <Braces size={20} className="text-cyan-300" />
+            </div>
+
+            <div className="hidden sm:flex items-center justify-center absolute left-4 -bottom-2 w-12 h-12 rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-c">
+              <TerminalSquare size={20} className="text-cyan-300" />
+            </div>
+
             <div
               className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-cyan-400/25 to-azure-500/15 bg-grid-pattern bg-[length:32px_32px] blur-xl animate-drift"
               aria-hidden="true"
@@ -98,12 +113,12 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute -left-6 top-8 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block">
+            <div className="absolute -left-6 top-8 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block z-20">
               <p className="font-mono text-[10px] text-mist-500 uppercase tracking-wide">Stack</p>
               <p className="text-sm font-semibold text-mist-100 mt-0.5">React · Flutter</p>
             </div>
 
-            <div className="absolute -right-6 bottom-10 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block">
+            <div className="absolute -right-6 bottom-10 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block z-20">
               <p className="font-mono text-[10px] text-mist-500 uppercase tracking-wide">Database</p>
               <p className="text-sm font-semibold text-mist-100 mt-0.5">PostgreSQL</p>
             </div>
