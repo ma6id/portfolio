@@ -218,9 +218,9 @@ export const projects: Project[] = [
       "Lunora est une marketplace pensée pour le marché algérien, dédiée au mariage, à la mode nuptiale et à la beauté : vente, location, paiement par échéances, services beauté et livraison.",
 
     problem:
-      "En Algérie, le secteur du mariage et de la beauté manque d'une plateforme unifiée fiable reliant vendeurs, clients, prestataires beauté et livraison, avec une gestion centralisée des rôles, des transactions et des commissions.",
+      "Avant son mariage, une famille algérienne doit souvent visiter des dizaines de boutiques dans plusieurs villes pour trouver la robe, le photographe ou la maquilleuse — sans savoir à l'avance les prix, les disponibilités, ni si le budget permet la location plutôt que l'achat.",
     solution:
-      "Une marketplace multi-rôles (client, vendeur, spécialiste beauté, livreur, administrateur) construite en Clean Architecture sur Flutter/Supabase, avec authentification sécurisée par CAPTCHA, interface trilingue (arabe RTL, français, anglais), et gestion automatique de la commission de plateforme (8%).",
+      "Avec Lunora, tout se fait depuis le téléphone : comparer les robes et prestataires beauté par ville, choisir entre achat, location ou paiement par échéances, réserver un rendez-vous beauté, et suivre la livraison — sans déplacement inutile. Pour les vendeurs, la plateforme élargit leur visibilité au-delà de leur ville et augmente leurs opportunités de vente grâce à une audience nationale.",
     stack: [
       { label: "Frontend / Mobile", items: ["Flutter", "Dart", "Riverpod", "GoRouter"] },
       { label: "Backend / Database", items: ["Supabase", "PostgreSQL", "Row Level Security (RLS)"] },
