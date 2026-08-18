@@ -296,7 +296,7 @@ export const projects: Project[] = [
       },
     ],
     github: "https://github.com/ma6id/Smart_on-demand_printing_SAMUMLI",
-    demo: "https://samumli.vercel.app",
+    demo: "https://smart-on-demand-printing-samumli.vercel.app/",
     screenshots: [],
   },
 
