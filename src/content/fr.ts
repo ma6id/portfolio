@@ -237,9 +237,9 @@ export const projects: Project[] = [
     ],
     highlights: [
       "Conception d'une architecture multi-rôles en Clean Architecture (Flutter/Riverpod)",
-      "Intégration Supabase complète (Auth, RLS, base de données PostgreSQL)",
-      "Mise en place d'une protection anti-bot via Cloudflare Turnstile",
-      "Interface trilingue avec gestion des 58 wilayas algériennes comme source de données unique",
+      "Intégration backend complète avec authentification et base de données sécurisées",
+      "Mise en place d'une protection anti-bot à l'inscription et à la connexion",
+      "Interface trilingue avec gestion des 69 wilayas algériennes comme source de données unique",
       "Gestion automatisée des commissions et des rôles utilisateurs",
     ],
     challenges: [
