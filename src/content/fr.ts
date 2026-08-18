@@ -302,23 +302,46 @@ export const projects: Project[] = [
 
   {
     slug: "data-analysis",
-    name: "Data Analysis",
-    tagline: "Python · Pandas · SQL",
+    name: "Analyse de données — Video Games Sales",
+    tagline: "Exploration, visualisation et modélisation prédictive sur un dataset de ventes de jeux vidéo",
     categories: ["data"],
     status: "[À COMPLÉTER]",
     cover: "",
     description:
-      "Projet d'analyse de données réalisé dans le cadre du Master en Intelligence Artificielle : nettoyage, exploration et transformation de données avec Python, Pandas et SQL.",
-    problem: "[À COMPLÉTER — problématique du dataset / projet réel]",
-    solution: "[À COMPLÉTER — approche d'analyse réelle]",
-    stack: [{ label: "Outils", items: ["Python", "Pandas", "SQL"] }],
-    features: [
-      "Nettoyage des données",
-      "Exploration et analyse",
-      "Transformation",
-      "[À COMPLÉTER — statistiques / visualisation si utilisées]",
+      "Travail pratique de Data Analysis avec Python et Jupyter Notebook, mené sur un dataset de ventes mondiales de jeux vidéo (plateforme, genre, éditeur, ventes par région). Le projet couvre l'ensemble du pipeline d'analyse : exploration, nettoyage, visualisation, réduction de dimensionnalité par PCA, et modélisation prédictive par régression linéaire.",
+    problem:
+      "Un dataset brut de ventes de jeux vidéo contient de nombreuses variables interdépendantes (ventes par région, plateforme, genre, année) difficiles à interpréter telles quelles, avec des valeurs manquantes et des échelles hétérogènes qui compliquent toute analyse ou modélisation directe.",
+    solution:
+      "Un pipeline complet d'analyse de données : nettoyage et exploration (Pandas), visualisations statistiques (Matplotlib/Seaborn) pour identifier les tendances et corrélations, standardisation des variables, réduction de dimensionnalité par PCA pour synthétiser l'information, puis un modèle de régression linéaire (Scikit-learn) pour prédire les ventes globales à partir des variables disponibles.",
+    stack: [
+      { label: "Langage", items: ["Python"] },
+      { label: "Data", items: ["Pandas", "NumPy"] },
+      { label: "Visualisation", items: ["Matplotlib", "Seaborn"] },
+      { label: "Machine Learning", items: ["Scikit-learn"] },
     ],
-    highlights: ["[À COMPLÉTER — conclusions réelles du projet]"],
+    features: [
+      "Exploration et nettoyage du dataset (valeurs manquantes, sélection des colonnes pertinentes)",
+      "Analyse exploratoire (EDA) : histogrammes, bar plots, matrice de corrélation",
+      "Standardisation des variables (StandardScaler)",
+      "Réduction de dimensionnalité par PCA (2 composantes principales)",
+      "Modèle de régression linéaire pour prédire les ventes globales",
+      "Évaluation du modèle (R², RMSE)",
+    ],
+    highlights: [
+      "Analyse exploratoire complète avec visualisations statistiques (distribution, corrélations)",
+      "Application de la standardisation avant réduction de dimensionnalité",
+      "Mise en œuvre d'une PCA pour synthétiser les variables en composantes principales",
+      "Construction et évaluation d'un modèle prédictif de régression linéaire",
+      "Pipeline structuré : exploration → nettoyage → EDA → standardisation → PCA → machine learning → évaluation",
+    ],
+    challenges: [
+      {
+        problem:
+          "Le dataset contient plusieurs variables de ventes régionales (Amérique du Nord, Europe, Japon, autres) fortement corrélées entre elles, ce qui rend l'analyse et la modélisation directe complexes : trop de dimensions se chevauchent et se répètent, sans qu'il soit facile d'en tirer une vision claire ou de construire un modèle stable.",
+        solution:
+          "Application d'une Analyse en Composantes Principales (PCA) après standardisation des variables : les multiples variables corrélées sont résumées en deux composantes principales qui concentrent l'essentiel de l'information (variance expliquée), permettant à la fois une visualisation claire des données et une base plus stable pour la modélisation prédictive.",
+      },
+    ],
     github: "[À COMPLÉTER — lien GitHub / notebook]",
     demo: "",
     screenshots: [],
