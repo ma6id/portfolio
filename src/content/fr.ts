@@ -263,11 +263,14 @@ export const projects: Project[] = [
     status: "Déployé",
     cover: "/assets/logos/samumli-icon.png",
     description:
-      "SAMUMLI est une marketplace algérienne d'impression à la demande qui connecte les clients aux imprimeries et librairies locales. Le modèle repose sur des points de retrait fixes : le client commande en ligne et récupère sa commande à l'imprimerie participante la plus proche, sans attente de livraison.",
+      "Samumli est une plateforme SaaS multi-rôles qui connecte particuliers et entreprises à un réseau d'imprimeries à travers l'Algérie, avec une couverture complète des 58 wilayas. La plateforme combine deux modèles : un marketplace décentralisé pour les commandes en petite quantité via des imprimeries partenaires, et une imprimerie principale intégrée pour les commandes en gros volume. La première section (impression de documents : documents, cartes de visite, roll-up, flyers) est finalisée et prête au lancement commercial ; la seconde (personnalisation textile : t-shirts, hoodies, casquettes) est en cours de développement.",
+
     problem:
-      "En Algérie, commander une impression personnalisée impose souvent de se déplacer physiquement chez un imprimeur, sans visibilité sur les prix, les délais ou la disponibilité, et sans solution numérique centralisée reliant clients et imprimeries locales.",
+      "En Algérie, commander une impression personnalisée ou un article textile en gros volume impose souvent de multiplier les contacts avec différentes imprimeries locales, sans visibilité centralisée sur les prix, les délais ou la capacité à traiter de grandes quantités.",
+
     solution:
-      "Une marketplace avec quatre rôles distincts (client, imprimerie, imprimerie principale, administration), où le client commande en ligne et retire sa commande dans l'imprimerie participante la plus proche — un modèle de retrait plutôt que de livraison, avec suivi de commande en temps réel via Supabase Realtime.",
+      "Une marketplace hybride : les particuliers et petites commandes passent par un réseau d'imprimeries partenaires façon marketplace, tandis que les commandes en gros volume sont traitées directement par une imprimerie principale intégrée à la plateforme — avec authentification par rôle (client, imprimerie, imprimerie principale, administration), tableaux de bord analytiques, et couverture nationale complète (58 wilayas) dès le lancement.",
+
     stack: [
       { label: "Frontend", items: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Leaflet"] },
       { label: "Backend / Database", items: ["Supabase", "PostgreSQL", "Row Level Security (RLS)", "Realtime"] },
@@ -275,20 +278,24 @@ export const projects: Project[] = [
     ],
     roles: ["Client", "Imprimerie (Print Shop)", "Imprimerie principale", "Administration"],
     features: [
-      "Marketplace multi-imprimeries avec retrait en point fixe",
-      "Tableaux de bord par rôle (client, imprimerie, imprimerie principale, administration)",
-      "Suivi de commande en temps réel (Supabase Realtime)",
-      "Gestion du cycle de vie complet des commandes",
-      "Intégration de transporteurs algériens (Yalidine, Maystro, Procolis, Zaki Express)",
-      "Interface en arabe (RTL) avec prix en Dinar Algérien (DA)",
+      "Système multi-rôles avec routes protégées (client, imprimerie, imprimerie principale, administration)",
+      "Authentification complète via Supabase (connexion, inscription, profil)",
+      "Couverture géographique des 58 wilayas algériennes",
+      "Interface trilingue (arabe, français, anglais)",
+      "Tableaux de bord avec analyses de données réelles (dépenses, répartition des commandes)",
+      "Carte interactive pour la localisation de livraison",
+      "Tarification dynamique pour les commandes en gros volume",
+      "Mode sombre (Dark Mode)",
     ],
+
     highlights: [
-      "Conception d'une architecture multi-rôles avec routing et dashboards séparés",
-      "Intégration Supabase complète (Auth, Realtime, RLS sur 21 tables)",
-      "Mise en place du modèle de retrait en point fixe (différenciateur clé du marché)",
-      "Intégration de 4 transporteurs algériens pour la logistique",
-      "Interface RTL en arabe avec identité visuelle dédiée (Tajawal, couleurs #E67E22 / #C0392B)",
+      "Modèle hybride rare : marketplace décentralisé (commission) + production directe intégrée (marge complète) sur une même plateforme",
+      "Couverture nationale complète (58 wilayas) dès le lancement, contrairement à la majorité des concurrents locaux centrés sur certaines villes",
+      "Conception d'un système de rôles complet avec dashboards et permissions dédiées",
+      "Intégration de tableaux de bord analytiques avec données réelles (recharts)",
+      "Prévu : éditeur interactif de personnalisation textile en 3D, quasi inexistant chez les concurrents algériens actuels",
     ],
+
     challenges: [
       {
         problem: "[À COMPLÉTER — un problème technique réellement rencontré sur Samumli]",
