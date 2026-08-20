@@ -1,9 +1,11 @@
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
 
-const completionData = [
-  { name: "Scholaria", value: 28 },
-  { name: "Lunora", value: 34 },
-  { name: "Samumli", value: 79 },
+const progressData = [
+  { t: "0%", Scholaria: 0, Lunora: 0, Samumli: 0 },
+  { t: "25%", Scholaria: 22, Lunora: 8, Samumli: 12 },
+  { t: "50%", Scholaria: 27, Lunora: 16, Samumli: 28 },
+  { t: "75%", Scholaria: 28, Lunora: 25, Samumli: 52 },
+  { t: "100%", Scholaria: 28, Lunora: 34, Samumli: 79 },
 ];
 
 const successData = [
@@ -32,21 +34,17 @@ function ChartCard({ title, children }: { title: string; children: React.ReactNo
 export default function ProjectStats() {
   return (
     <div className="grid sm:grid-cols-2 gap-5 mt-6">
-      <ChartCard title="Taux d'achèvement (%)">
+      <ChartCard title="Progression de l'avancement (%)">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={completionData}>
+          <LineChart data={progressData}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(56,189,248,0.08)" />
-            <XAxis dataKey="name" stroke="#8ea3b8" fontSize={11} />
+            <XAxis dataKey="t" stroke="#8ea3b8" fontSize={11} label={{ value: "Temps écoulé (relatif)", position: "insideBottom", offset: -5, fontSize: 10, fill: "#8ea3b8" }} />
             <YAxis stroke="#8ea3b8" fontSize={11} />
             <Tooltip contentStyle={{ background: "#0d1424", border: "1px solid rgba(34,211,238,0.2)", borderRadius: 8 }} />
-            <Line
-              type="monotone"
-              dataKey="value"
-              stroke="#22d3ee"
-              strokeWidth={3}
-              dot={{ r: 5, fill: "#22d3ee" }}
-              activeDot={{ r: 7 }}
-            />
+            <Legend wrapperStyle={{ fontSize: 11 }} />
+            <Line type="monotone" dataKey="Scholaria" stroke="#22d3ee" strokeWidth={3} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="Lunora" stroke="#5b9bf7" strokeWidth={3} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="Samumli" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4 }} />
           </LineChart>
         </ResponsiveContainer>
       </ChartCard>
