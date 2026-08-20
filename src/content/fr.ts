@@ -275,6 +275,7 @@ export const projects: Project[] = [
       { label: "Frontend", items: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Leaflet"] },
       { label: "Backend / Database", items: ["Supabase", "PostgreSQL", "Row Level Security (RLS)", "Realtime"] },
       { label: "Intégrations", items: ["Yalidine", "Maystro", "Procolis", "Zaki Express"] },
+      { label: "Sécurité", items: ["Antivirus scan (ClamAV)", "Signed URLs (Supabase Storage)", "Chiffrement des fichiers"] },
     ],
     roles: ["Client", "Imprimerie (Print Shop)", "Imprimerie principale", "Administration"],
     features: [
