@@ -7,9 +7,9 @@ const completionData = [
 ];
 
 const successData = [
-  { name: "Scholaria", value: 56 },
-  { name: "Lunora", value: 40 },
-  { name: "Samumli", value: 89 },
+  { name: "Scholaria", value: 20 },
+  { name: "Lunora", value: 81 },
+  { name: "Samumli", value: 100 },
 ];
 
 const timeData = [
@@ -46,7 +46,7 @@ export default function ProjectStats() {
         </ResponsiveContainer>
       </ChartCard>
 
-      <ChartCard title="Taux de succès sur le marché (%)">
+      <ChartCard title="Contribution personnelle à l'équipe (%)">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={successData}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(56,189,248,0.08)" />
