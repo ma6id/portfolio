@@ -3,6 +3,7 @@ import { ExternalLink, Github, LayoutGrid } from "lucide-react";
 import { projects, type Project, type ProjectCategory } from "../content/fr";
 import Reveal from "./Reveal";
 import ProjectModal from "./ProjectModal";
+import ProjectStats from "./ProjectStats";
 import TechChip from "./TechChip";
 
 const filters: { key: ProjectCategory | "all"; label: string }[] = [
@@ -102,6 +103,8 @@ export default function Projects() {
             </Reveal>
           ))}
         </div>
+
+        <ProjectStats />
       </div>
 
       {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
