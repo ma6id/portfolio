@@ -23,6 +23,8 @@ export default function Projects() {
     () => (filter === "all" ? projects : projects.filter((p) => p.categories.includes(filter))),
     [filter]
   );
+  const mainVisible = useMemo(() => visible.filter((p) => p.slug !== "data-analysis"), [visible]);
+  const miniProject = useMemo(() => projects.find((p) => p.slug === "data-analysis"), []);
 
   return (
     <section id="projets" className="py-24 border-t border-mist-500/10">
@@ -54,7 +56,7 @@ export default function Projects() {
         </Reveal>
 
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visible.map((p, i) => (
+          {mainVisible.map((p, i) => (
             <Reveal key={p.slug} delay={i * 90}>
               <button
                 onClick={() => setSelected(p)}
@@ -105,6 +107,41 @@ export default function Projects() {
         </div>
 
         <ProjectStats />
+
+        {miniProject && (
+          <div className="mt-14">
+            <Reveal>
+              <p className="eyebrow mb-4">Mini-projets</p>
+            </Reveal>
+            <Reveal delay={80}>
+              <button
+                onClick={() => setSelected(miniProject)}
+                className="text-left w-full max-w-sm glass glass-hover rounded-xl overflow-hidden flex items-center gap-4 p-3 focus-ring"
+              >
+                <div className="w-20 h-20 rounded-lg bg-ink-800/60 flex items-center justify-center overflow-hidden shrink-0">
+                  {miniProject.cover ? (
+                    <img
+                      src={miniProject.cover}
+                      alt={miniProject.name}
+                      className={
+                        miniProject.coverFit === "cover"
+                          ? "w-full h-full object-cover"
+                          : "w-12 h-12 object-contain"
+                      }
+                    />
+                  ) : (
+                    <LayoutGrid className="text-mist-500" size={20} />
+                  )}
+                </div>
+                <div className="min-w-0">
+                  <h3 className="font-display font-semibold text-sm text-mist-100 truncate">{miniProject.name}</h3>
+                  <p className="text-mist-400 text-xs mt-1 line-clamp-2">{miniProject.tagline}</p>
+                </div>
+                <span className="ml-auto text-xs font-mono text-accent shrink-0 pr-1">Voir →</span>
+              </button>
+            </Reveal>
+          </div>
+        )}
       </div>
 
       {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
