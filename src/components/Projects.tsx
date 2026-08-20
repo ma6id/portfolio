@@ -116,7 +116,7 @@ export default function Projects() {
             <Reveal delay={80}>
               <button
                 onClick={() => setSelected(miniProject)}
-                className="text-left w-full max-w-sm glass glass-hover rounded-xl overflow-hidden flex items-center gap-4 p-3 focus-ring"
+                className="text-left w-full max-w-lg glass glass-hover rounded-xl overflow-hidden flex items-center gap-4 p-4 focus-ring"
               >
                 <div className="w-20 h-20 rounded-lg bg-ink-800/60 flex items-center justify-center overflow-hidden shrink-0">
                   {miniProject.cover ? (
