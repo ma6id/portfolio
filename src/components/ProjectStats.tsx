@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
+import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
 
 const completionData = [
   { name: "Scholaria", value: 28 },
@@ -34,15 +34,20 @@ export default function ProjectStats() {
     <div className="grid sm:grid-cols-2 gap-5 mt-6">
       <ChartCard title="Taux d'achèvement (%)">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={completionData}>
+          <LineChart data={completionData}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(56,189,248,0.08)" />
             <XAxis dataKey="name" stroke="#8ea3b8" fontSize={11} />
             <YAxis stroke="#8ea3b8" fontSize={11} />
             <Tooltip contentStyle={{ background: "#0d1424", border: "1px solid rgba(34,211,238,0.2)", borderRadius: 8 }} />
-            <Bar dataKey="value" radius={[6, 6, 0, 0]}>
-              {completionData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
-            </Bar>
-          </BarChart>
+            <Line
+              type="monotone"
+              dataKey="value"
+              stroke="#22d3ee"
+              strokeWidth={3}
+              dot={{ r: 5, fill: "#22d3ee" }}
+              activeDot={{ r: 7 }}
+            />
+          </LineChart>
         </ResponsiveContainer>
       </ChartCard>
 
