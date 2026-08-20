@@ -280,7 +280,7 @@ export const projects: Project[] = [
     features: [
       "Système multi-rôles avec routes protégées (client, imprimerie, imprimerie principale, administration)",
       "Authentification complète via Supabase (connexion, inscription, profil)",
-      "Couverture géographique des 58 wilayas algériennes",
+      "Couverture géographique des 69 wilayas algériennes",
       "Interface trilingue (arabe, français, anglais)",
       "Tableaux de bord avec analyses de données réelles (dépenses, répartition des commandes)",
       "Carte interactive pour la localisation de livraison",
@@ -290,10 +290,10 @@ export const projects: Project[] = [
 
     highlights: [
       "Modèle hybride rare : marketplace décentralisé (commission) + production directe intégrée (marge complète) sur une même plateforme",
-      "Couverture nationale complète (58 wilayas) dès le lancement, contrairement à la majorité des concurrents locaux centrés sur certaines villes",
+      "Couverture nationale complète (69 wilayas) dès le lancement, contrairement à la majorité des concurrents locaux centrés sur certaines villes",
       "Conception d'un système de rôles complet avec dashboards et permissions dédiées",
       "Intégration de tableaux de bord analytiques avec données réelles (recharts)",
-      "Prévu : éditeur interactif de personnalisation textile en 3D, quasi inexistant chez les concurrents algériens actuels",
+      "Prévu : technologie avancée et unique de conception et de visualisation 3D interactive pour la personnalisation textile",
     ],
 
     challenges: [
