@@ -269,7 +269,7 @@ export const projects: Project[] = [
       "En Algérie, commander une impression personnalisée ou un article textile en gros volume impose souvent de multiplier les contacts avec différentes imprimeries locales, sans visibilité centralisée sur les prix, les délais ou la capacité à traiter de grandes quantités.",
 
     solution:
-      "Une marketplace hybride : les particuliers et petites commandes passent par un réseau d'imprimeries partenaires façon marketplace, tandis que les commandes en gros volume sont traitées directement par une imprimerie principale intégrée à la plateforme — avec authentification par rôle (client, imprimerie, imprimerie principale, administration), tableaux de bord analytiques, et couverture nationale complète (58 wilayas) dès le lancement.",
+      "Une marketplace hybride : les particuliers et petites commandes passent par un réseau d'imprimeries partenaires façon marketplace, tandis que les commandes en gros volume sont traitées directement par une imprimerie principale intégrée à la plateforme — avec authentification par rôle (client, imprimerie, imprimerie principale, administration), tableaux de bord analytiques, et couverture nationale complète (69 wilayas) dès le lancement.",
 
     stack: [
       { label: "Frontend", items: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "Recharts", "Leaflet"] },
