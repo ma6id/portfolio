@@ -263,7 +263,7 @@ export const projects: Project[] = [
     status: "Déployé",
     cover: "/assets/logos/samumli-icon.png",
     description:
-      "Samumli est une plateforme SaaS multi-rôles qui connecte particuliers et entreprises à un réseau d'imprimeries à travers l'Algérie, avec une couverture complète des 58 wilayas. La plateforme combine deux modèles : un marketplace décentralisé pour les commandes en petite quantité via des imprimeries partenaires, et une imprimerie principale intégrée pour les commandes en gros volume. La première section (impression de documents : documents, cartes de visite, roll-up, flyers) est finalisée et prête au lancement commercial ; la seconde (personnalisation textile : t-shirts, hoodies, casquettes) est en cours de développement.",
+      "Samumli est une plateforme qui met en relation particuliers et entreprises avec un réseau d'imprimeries à travers l'Algérie. Les clients peuvent commander en ligne des documents, des cartes de visite, des brochures ou des vêtements personnalisés (T-shirts, vestes, casquettes), et leurs commandes sont ensuite transmises à l'imprimerie la plus proche en fonction de la distance et du volume commandé. Le service d'impression de documents est opérationnel, tandis que le service de personnalisation de vêtements est en cours de développement.",
 
     problem:
       "En Algérie, commander une impression personnalisée ou un article textile en gros volume impose souvent de multiplier les contacts avec différentes imprimeries locales, sans visibilité centralisée sur les prix, les délais ou la capacité à traiter de grandes quantités.",
@@ -298,8 +298,10 @@ export const projects: Project[] = [
 
     challenges: [
       {
-        problem: "[À COMPLÉTER — un problème technique réellement rencontré sur Samumli]",
-        solution: "[À COMPLÉTER — la solution technique apportée]",
+        problem:
+          "L'ajout d'un éditeur interactif de personnalisation textile en 3D — pour visualiser en temps réel un t-shirt, un hoodie ou une casquette personnalisés avant impression — s'est révélé bien plus complexe que prévu : rendu 3D fluide dans le navigateur, application dynamique des motifs sur un modèle 3D, et performance correcte sur des appareils mobiles grand public. Cette difficulté a considérablement retardé le développement de la section personnalisation textile.",
+        solution:
+          "Le développement a été priorisé en deux temps : la partie impression de documents (sans dépendance 3D) a été finalisée et lancée en premier, pendant que l'approche technique pour le module 3D est affinée séparément — évitant ainsi qu'un chantier complexe ne bloque le lancement de l'ensemble de la plateforme.",
       },
     ],
     github: "https://github.com/ma6id/Smart_on-demand_printing_SAMUMLI",
