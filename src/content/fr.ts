@@ -54,9 +54,9 @@ export const education = [
   },
   {
     degree: "Licence en systèmes informatiques et réseaux",
-    school: "[université de Chlef — Algérie]",
-    period: "[2019 — 2025]",
-    status: "[Certificat obtenu]",
+    school: "Université de Chlef — Algérie",
+    period: "2019 — 2025",
+    status: "Certificat obtenu",
     details: [
       "algorithme et structures de données (java, C, C++)",
       "programmation web (HTML, CSS, JavaScript, PHP)",
