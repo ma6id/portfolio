@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Send } from "lucide-react";
 import { identity, socials } from "../content/fr";
 import Reveal from "./Reveal";
 
@@ -29,7 +29,6 @@ export default function Contact() {
     { icon: Phone, label: "Téléphone", value: identity.phone, href: `tel:${identity.phone}` },
     { icon: MapPin, label: "Localisation", value: identity.location, href: undefined },
     { icon: Github, label: "GitHub", value: "github.com/ma6id", href: socials.github },
-    { icon: Linkedin, label: "LinkedIn", value: socials.linkedin, href: socials.linkedin },
   ];
 
   return (

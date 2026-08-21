@@ -30,7 +30,6 @@ export const socials = {
   github: "https://github.com/ma6id",
   facebook: "https://www.facebook.com/torna.do.714",
   instagram: "https://www.instagram.com/madji_uoafet_7som/",
-  linkedin: "[À COMPLÉTER — lien LinkedIn]",
 };
 
 export const education = [
