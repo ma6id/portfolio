@@ -5,23 +5,39 @@ import Reveal from "./Reveal";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  // NOTE : aucun backend n'est encore configuré. Ce formulaire ouvre un e-mail
-  // pré-rempli via mailto: en solution simple et fiable par défaut.
-  // Pour un envoi direct sans quitter la page, brancher ce formulaire sur un
-  // service comme Formspree, EmailJS ou une route API dédiée, puis remplacer
-  // handleSubmit ci-dessous par l'appel réseau correspondant.
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Envoi via la route API /api/contact (fonction serverless Vercel), qui
+  // relaie le message par turboSMTP. Les identifiants SMTP restent côté
+  // serveur (variables d'environnement Vercel) et ne sont jamais exposés au
+  // navigateur.
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
     const name = data.get("name");
     const email = data.get("email");
+    const subject = data.get("subject");
     const message = data.get("message");
-    const subject = encodeURIComponent(`Contact portfolio — ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:${identity.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+
+    setSending(true);
+    setError(false);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      if (!res.ok) throw new Error("Échec de l'envoi");
+      setSent(true);
+      form.reset();
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const items = [
@@ -103,12 +119,17 @@ export default function Contact() {
                 placeholder="Votre message"
                 className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors resize-none"
               />
-              <button type="submit" className="btn-primary w-full justify-center">
-                <Send size={15} /> Envoyer le message
+              <button type="submit" disabled={sending} className="btn-primary w-full justify-center disabled:opacity-60">
+                <Send size={15} /> {sending ? "Envoi en cours..." : "Envoyer le message"}
               </button>
               {sent && (
                 <p className="text-xs text-accent font-mono text-center">
-                  Votre client mail s'est ouvert avec le message pré-rempli.
+                  Message envoyé avec succès. Je vous répondrai rapidement.
+                </p>
+              )}
+              {error && (
+                <p className="text-xs text-red-400 font-mono text-center">
+                  Une erreur est survenue. Réessayez ou écrivez directement à {identity.email}.
                 </p>
               )}
             </form>
