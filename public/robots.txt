@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://[À COMPLÉTER-domaine].com/sitemap.xml
+Sitemap: https://mostefaoui-abd-elmadjid.dev/sitemap.xml

@@ -7,8 +7,8 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
-  domain: "[portfolio.MAM.dev]",
-  url: "https://[portfolio.MAM].com",
+  domain: "mostefaoui-abd-elmadjid.dev",
+  url: "https://mostefaoui-abd-elmadjid.dev",
 };
 
 export const identity = {
