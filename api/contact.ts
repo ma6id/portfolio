@@ -47,7 +47,7 @@ export default async function handler(req: Req, res: Res) {
     });
 
     await transporter.sendMail({
-      from: `"Portfolio — ${name}" <${SMTP_USER}>`,
+      from: `"Portfolio Contact" <${CONTACT_EMAIL}>`,
       to: CONTACT_EMAIL,
       replyTo: email,
       subject: subject ? `Contact portfolio — ${subject}` : `Contact portfolio — ${name}`,
