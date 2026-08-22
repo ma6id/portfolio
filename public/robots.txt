@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mostefaoui-abd-elmadjid.dev/sitemap.xml
+Sitemap: https://portfolio-mostefaoui-abde-elmadjid.vercel.app/sitemap.xml

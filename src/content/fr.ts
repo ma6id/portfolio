@@ -7,8 +7,8 @@
 // ─────────────────────────────────────────────────────────────
 
 export const site = {
-  domain: "mostefaoui-abd-elmadjid.dev",
-  url: "https://mostefaoui-abd-elmadjid.dev",
+  domain: "portfolio-mostefaoui-abde-elmadjid.vercel.app",
+  url: "https://portfolio-mostefaoui-abde-elmadjid.vercel.app",
 };
 
 export const identity = {
