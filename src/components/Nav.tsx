@@ -34,7 +34,7 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
 
   useEffect(() => {
     if (!qrOpen) return;
-    const opts = { width: 240, margin: 1, color: { dark: "#0d1420", light: "#e6edf5" } };
+    const opts = { width: 320, margin: 1, color: { dark: "#0d1420", light: "#e6edf5" } };
     if (qrCanvasRef.current) QRCodeLib.toCanvas(qrCanvasRef.current, site.url, opts).catch(() => {});
   }, [qrOpen]);
 
@@ -160,7 +160,7 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
           onClick={() => setQrOpen(false)}
         >
           <div
-            className="relative glass rounded-3xl p-8 sm:p-10 flex flex-col items-center gap-4 shadow-glow-sm max-w-sm w-full"
+            className="relative glass rounded-3xl p-8 sm:p-12 flex flex-col items-center gap-5 shadow-glow-sm max-w-lg w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -170,7 +170,7 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
             >
               <X size={16} />
             </button>
-            <div className="w-[240px] h-[240px] rounded-2xl bg-[#e6edf5] p-3 flex items-center justify-center">
+            <div className="w-[320px] h-[320px] max-w-full aspect-square rounded-2xl bg-[#e6edf5] p-4 flex items-center justify-center">
               <canvas ref={qrCanvasRef} />
             </div>
             <p className="text-mist-400 text-sm font-mono text-center">
