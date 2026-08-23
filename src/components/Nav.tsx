@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
-import { Download, Menu, Moon, Sun, X } from "lucide-react";
-import { nav, identity } from "../content/fr";
+import { useEffect, useRef, useState } from "react";
+import { Menu, Moon, QrCode, Sun, X } from "lucide-react";
+import QRCodeLib from "qrcode";
+import { nav, identity, site } from "../content/fr";
 import type { Theme } from "../hooks/useTheme";
 
 export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("accueil");
+  const [qrOpen, setQrOpen] = useState(false);
+  const qrCanvasRef = useRef<HTMLCanvasElement | null>(null);
+  const qrCanvasMobileRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -28,6 +32,13 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!qrOpen) return;
+    const opts = { width: 148, margin: 1, color: { dark: "#0d1420", light: "#e6edf5" } };
+    if (qrCanvasRef.current) QRCodeLib.toCanvas(qrCanvasRef.current, site.url, opts).catch(() => {});
+    if (qrCanvasMobileRef.current) QRCodeLib.toCanvas(qrCanvasMobileRef.current, site.url, opts).catch(() => {});
+  }, [qrOpen]);
 
   const goTo = (id: string) => {
     setOpen(false);
@@ -81,10 +92,27 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
-          <a href={identity.cvUrl} download className="btn-primary">
-            <Download size={15} />
-            Télécharger CV
-          </a>
+          <div className="relative">
+            <button
+              onClick={() => setQrOpen((o) => !o)}
+              className="btn-primary"
+              aria-label="Afficher le QR code du portfolio"
+              aria-expanded={qrOpen}
+            >
+              <QrCode size={15} />
+              QR Code
+            </button>
+            {qrOpen && (
+              <div className="absolute right-0 mt-3 glass rounded-2xl p-4 flex flex-col items-center gap-2 shadow-glow-sm z-10">
+                <div className="w-[148px] h-[148px] rounded-xl bg-[#e6edf5] p-2 flex items-center justify-center">
+                  <canvas ref={qrCanvasRef} />
+                </div>
+                <p className="text-mist-400 text-[11px] font-mono whitespace-nowrap">
+                  Scannez pour découvrir le portfolio
+                </p>
+              </div>
+            )}
+          </div>
         </div>
 
         <button
@@ -115,11 +143,24 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </button>
-            <a href={identity.cvUrl} download className="btn-primary flex-1 justify-center">
-              <Download size={15} />
-              Télécharger CV
-            </a>
+            <button
+              onClick={() => setQrOpen((o) => !o)}
+              className="btn-primary flex-1 justify-center"
+              aria-label="Afficher le QR code du portfolio"
+              aria-expanded={qrOpen}
+            >
+              <QrCode size={15} />
+              QR Code
+            </button>
           </div>
+          {qrOpen && (
+            <div className="mt-3 flex flex-col items-center gap-2">
+              <div className="w-[148px] h-[148px] rounded-xl bg-[#e6edf5] p-2 flex items-center justify-center">
+                <canvas ref={qrCanvasMobileRef} />
+              </div>
+              <p className="text-mist-400 text-[11px] font-mono">Scannez pour découvrir le portfolio</p>
+            </div>
+          )}
         </div>
       )}
     </header>
