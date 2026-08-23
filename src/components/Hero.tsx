@@ -16,7 +16,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="font-display font-semibold text-[clamp(1.75rem,6vw_+_0.5rem,3rem)] leading-[1.1] tracking-tight text-mist-100">
+            <h1 className="font-display font-semibold text-[clamp(1.1rem,5vw_+_0.2rem,3rem)] leading-[1.15] tracking-tight text-mist-100">
               {identity.role1}
               <br />
               <span className="text-gradient">{identity.role2}</span>
