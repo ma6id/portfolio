@@ -28,7 +28,7 @@ export default function Gallery() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <p className="eyebrow mb-3">Design & branding</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-mist-100">
+          <h2 className="font-display font-semibold text-[clamp(1.5rem,4vw_+_0.9rem,2.25rem)] text-mist-100">
             Identité Visuelle
           </h2>
           <p className="text-mist-300 mt-4 max-w-2xl">

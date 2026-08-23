@@ -52,7 +52,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <p className="eyebrow mb-3">Prenons contact</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-mist-100">
+          <h2 className="font-display font-semibold text-[clamp(1.5rem,4vw_+_0.9rem,2.25rem)] text-mist-100">
             Travaillons ensemble
           </h2>
         </Reveal>

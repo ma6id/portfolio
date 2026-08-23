@@ -33,7 +33,7 @@ export default function Projects() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="eyebrow mb-3">Réalisations</p>
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl text-mist-100">
+              <h2 className="font-display font-semibold text-[clamp(1.5rem,4vw_+_0.9rem,2.25rem)] text-mist-100">
                 Projets
               </h2>
             </div>
