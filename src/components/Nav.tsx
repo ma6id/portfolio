@@ -10,7 +10,6 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
   const [active, setActive] = useState("accueil");
   const [qrOpen, setQrOpen] = useState(false);
   const qrCanvasRef = useRef<HTMLCanvasElement | null>(null);
-  const qrCanvasMobileRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -35,9 +34,22 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
 
   useEffect(() => {
     if (!qrOpen) return;
-    const opts = { width: 148, margin: 1, color: { dark: "#0d1420", light: "#e6edf5" } };
+    const opts = { width: 240, margin: 1, color: { dark: "#0d1420", light: "#e6edf5" } };
     if (qrCanvasRef.current) QRCodeLib.toCanvas(qrCanvasRef.current, site.url, opts).catch(() => {});
-    if (qrCanvasMobileRef.current) QRCodeLib.toCanvas(qrCanvasMobileRef.current, site.url, opts).catch(() => {});
+  }, [qrOpen]);
+
+  useEffect(() => {
+    if (!qrOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setQrOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
   }, [qrOpen]);
 
   const goTo = (id: string) => {
@@ -92,27 +104,14 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
           >
             {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
           </button>
-          <div className="relative">
-            <button
-              onClick={() => setQrOpen((o) => !o)}
-              className="btn-primary"
-              aria-label="Afficher le QR code du portfolio"
-              aria-expanded={qrOpen}
-            >
-              <QrCode size={15} />
-              QR Code
-            </button>
-            {qrOpen && (
-              <div className="absolute right-0 mt-3 glass rounded-2xl p-4 flex flex-col items-center gap-2 shadow-glow-sm z-10">
-                <div className="w-[148px] h-[148px] rounded-xl bg-[#e6edf5] p-2 flex items-center justify-center">
-                  <canvas ref={qrCanvasRef} />
-                </div>
-                <p className="text-mist-400 text-[11px] font-mono whitespace-nowrap">
-                  Scannez pour découvrir le portfolio
-                </p>
-              </div>
-            )}
-          </div>
+          <button
+            onClick={() => setQrOpen(true)}
+            className="btn-primary"
+            aria-label="Afficher le QR code du portfolio"
+          >
+            <QrCode size={15} />
+            QR Code
+          </button>
         </div>
 
         <button
@@ -144,23 +143,40 @@ export default function Nav({ theme, toggle }: { theme: Theme; toggle: () => voi
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </button>
             <button
-              onClick={() => setQrOpen((o) => !o)}
+              onClick={() => setQrOpen(true)}
               className="btn-primary flex-1 justify-center"
               aria-label="Afficher le QR code du portfolio"
-              aria-expanded={qrOpen}
             >
               <QrCode size={15} />
               QR Code
             </button>
           </div>
-          {qrOpen && (
-            <div className="mt-3 flex flex-col items-center gap-2">
-              <div className="w-[148px] h-[148px] rounded-xl bg-[#e6edf5] p-2 flex items-center justify-center">
-                <canvas ref={qrCanvasMobileRef} />
-              </div>
-              <p className="text-mist-400 text-[11px] font-mono">Scannez pour découvrir le portfolio</p>
+        </div>
+      )}
+
+      {qrOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-ink-900/80 backdrop-blur-sm"
+          onClick={() => setQrOpen(false)}
+        >
+          <div
+            className="relative glass rounded-3xl p-8 sm:p-10 flex flex-col items-center gap-4 shadow-glow-sm max-w-sm w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setQrOpen(false)}
+              aria-label="Fermer"
+              className="absolute top-4 right-4 w-9 h-9 rounded-full border border-mist-500/30 flex items-center justify-center text-mist-300 hover:text-accent hover:border-accent/40 transition-colors focus-ring"
+            >
+              <X size={16} />
+            </button>
+            <div className="w-[240px] h-[240px] rounded-2xl bg-[#e6edf5] p-3 flex items-center justify-center">
+              <canvas ref={qrCanvasRef} />
             </div>
-          )}
+            <p className="text-mist-400 text-sm font-mono text-center">
+              Scannez pour découvrir le portfolio
+            </p>
+          </div>
         </div>
       )}
     </header>
