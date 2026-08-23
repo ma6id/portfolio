@@ -7,7 +7,6 @@ import Process from "./components/Process";
 import Gallery from "./components/Gallery";
 import VideoEditing from "./components/VideoEditing";
 import Contact from "./components/Contact";
-import ShareLink from "./components/ShareLink";
 import Footer from "./components/Footer";
 import { useTheme } from "./hooks/useTheme";
 
@@ -28,7 +27,6 @@ export default function App() {
         <Gallery />
         <VideoEditing />
         <Contact />
-        <ShareLink />
       </main>
       <Footer />
     </div>
