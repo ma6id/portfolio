@@ -19,8 +19,8 @@ export default function App() {
       <Nav theme={theme} toggle={toggle} />
       <main>
         <Hero />
+        <Education />
         <div id="developpeur">
-          <Education />
           <Skills />
           <Projects />
           <Process />
