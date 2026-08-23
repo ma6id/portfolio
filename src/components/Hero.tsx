@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section id="accueil" className="relative pt-40 pb-28 overflow-hidden">
       <div className="absolute inset-0 grid-bg pointer-events-none" />
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 relative grid md:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 relative grid grid-cols-[1.1fr_0.9fr] gap-4 sm:gap-10 lg:gap-14 items-center">
         <div>
           <Reveal>
             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5">
@@ -82,16 +82,16 @@ export default function Hero() {
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[125%] aspect-square rounded-full bg-radial-glow animate-glow-pulse pointer-events-none" aria-hidden="true" />
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] aspect-square rounded-full bg-gradient-to-br from-cyan-400/30 via-azure-500/10 to-transparent blur-2xl pointer-events-none" aria-hidden="true" />
 
-            <div className="hidden sm:flex items-center justify-center absolute -left-2 top-2 w-12 h-12 rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-a">
-              <Code2 size={20} className="text-cyan-300" />
+            <div className="flex items-center justify-center absolute -left-1 top-1 sm:-left-2 sm:top-2 w-[clamp(2rem,7vw,3rem)] h-[clamp(2rem,7vw,3rem)] rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-a">
+              <Code2 className="text-cyan-300 w-[clamp(0.9rem,3vw,1.25rem)] h-[clamp(0.9rem,3vw,1.25rem)]" />
             </div>
 
-            <div className="hidden sm:flex items-center justify-center absolute -right-3 top-16 w-12 h-12 rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-b">
-              <Braces size={20} className="text-cyan-300" />
+            <div className="flex items-center justify-center absolute -right-1 top-10 sm:-right-3 sm:top-16 w-[clamp(2rem,7vw,3rem)] h-[clamp(2rem,7vw,3rem)] rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-b">
+              <Braces className="text-cyan-300 w-[clamp(0.9rem,3vw,1.25rem)] h-[clamp(0.9rem,3vw,1.25rem)]" />
             </div>
 
-            <div className="hidden sm:flex items-center justify-center absolute left-4 -bottom-2 w-12 h-12 rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-c">
-              <TerminalSquare size={20} className="text-cyan-300" />
+            <div className="flex items-center justify-center absolute left-2 -bottom-1 sm:left-4 sm:-bottom-2 w-[clamp(2rem,7vw,3rem)] h-[clamp(2rem,7vw,3rem)] rounded-2xl glass shadow-glow-sm z-20 animate-float-orbit-c">
+              <TerminalSquare className="text-cyan-300 w-[clamp(0.9rem,3vw,1.25rem)] h-[clamp(0.9rem,3vw,1.25rem)]" />
             </div>
 
             <div
@@ -113,14 +113,14 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="absolute -left-6 top-8 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block z-20">
-              <p className="font-mono text-[10px] text-mist-500 uppercase tracking-wide">Stack</p>
-              <p className="text-sm font-semibold text-mist-100 mt-0.5">React · Flutter</p>
+            <div className="absolute -left-2 top-4 sm:-left-6 sm:top-8 glass rounded-xl px-2 py-1.5 sm:px-4 sm:py-3 shadow-glow-sm z-20">
+              <p className="font-mono text-[clamp(7px,1.6vw,10px)] text-mist-500 uppercase tracking-wide">Stack</p>
+              <p className="text-[clamp(10px,2.4vw,14px)] font-semibold text-mist-100 mt-0.5">React · Flutter</p>
             </div>
 
-            <div className="absolute -right-6 bottom-10 glass rounded-xl px-4 py-3 shadow-glow-sm hidden sm:block z-20">
-              <p className="font-mono text-[10px] text-mist-500 uppercase tracking-wide">Database</p>
-              <p className="text-sm font-semibold text-mist-100 mt-0.5">PostgreSQL</p>
+            <div className="absolute -right-2 bottom-6 sm:-right-6 sm:bottom-10 glass rounded-xl px-2 py-1.5 sm:px-4 sm:py-3 shadow-glow-sm z-20">
+              <p className="font-mono text-[clamp(7px,1.6vw,10px)] text-mist-500 uppercase tracking-wide">Database</p>
+              <p className="text-[clamp(10px,2.4vw,14px)] font-semibold text-mist-100 mt-0.5">PostgreSQL</p>
             </div>
           </div>
         </Reveal>
