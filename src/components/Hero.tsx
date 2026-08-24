@@ -24,7 +24,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={160}>
-            <p className="mt-6 text-mist-300 text-[clamp(0.8rem,2vw_+_0.5rem,1rem)] leading-relaxed max-w-xl">
+            <p className="mt-6 text-mist-300 text-[clamp(0.75rem,3vw_+_0.1rem,1rem)] leading-relaxed max-w-xl">
               {identity.intro}
             </p>
           </Reveal>
