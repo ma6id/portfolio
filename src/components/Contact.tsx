@@ -94,27 +94,35 @@ export default function Contact() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <input
                   required
+                  id="name"
                   name="name"
+                  autoComplete="name"
                   placeholder="Votre nom"
                   className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors"
                 />
                 <input
                   required
+                  id="email"
                   type="email"
                   name="email"
+                  autoComplete="email"
                   placeholder="Votre email"
                   className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors"
                 />
               </div>
               <input
                 required
+                id="subject"
                 name="subject"
+                autoComplete="off"
                 placeholder="Sujet"
                 className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors"
               />
               <textarea
                 required
+                id="message"
                 name="message"
+                autoComplete="off"
                 rows={5}
                 placeholder="Votre message"
                 className="w-full rounded-xl bg-ink-800/60 border border-mist-500/15 px-4 py-3 text-sm text-mist-100 placeholder:text-mist-500 focus:outline-none focus:border-accent/50 transition-colors resize-none"
