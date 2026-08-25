@@ -52,7 +52,7 @@ export default function VideoEditing() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <p className="eyebrow mb-3">Montage & motion</p>
-          <h2 className="font-display font-semibold text-[clamp(1.5rem,4vw_+_0.9rem,2.25rem)] text-mist-100">Monteur Vidéo</h2>
+          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-mist-100">Monteur Vidéo</h2>
           <p className="text-mist-300 mt-4 max-w-2xl">
             Je ne peux pas exposer l'ensemble de mes réalisations par respect de la confidentialité de mes clients.
           </p>
