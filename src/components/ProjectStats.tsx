@@ -21,7 +21,12 @@ const timeData = [
   { name: "Samumli (1 an)", value: 365 },
 ];
 
-const COLORS = ["#22d3ee", "#5b9bf7", "#3b82f6"];
+// Couleurs de marque réelles de chaque projet (extraites de leurs logos respectifs)
+const PROJECT_COLORS: Record<string, string> = {
+  Scholaria: "#5B3FD6", // indigo-violet du logo Scholaria
+  Lunora: "#C08A6B",    // rose gold du logo Lunora
+  Samumli: "#1450F0",   // bleu vif du logo Samumli
+};
 
 function ChartCard({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) {
   return (
@@ -39,7 +44,7 @@ export default function ProjectStats() {
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie data={timeData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={70} label>
-              {timeData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
+              {timeData.map((entry, i) => <Cell key={i} fill={PROJECT_COLORS[entry.name.split(" ")[0]]} />)}
             </Pie>
             <Tooltip contentStyle={{ background: "#0d1424", border: "1px solid rgba(34,211,238,0.2)", borderRadius: 8 }} />
             <Legend wrapperStyle={{ fontSize: 11 }} />
@@ -55,7 +60,7 @@ export default function ProjectStats() {
             <YAxis stroke="#8ea3b8" fontSize={11} />
             <Tooltip contentStyle={{ background: "#0d1424", border: "1px solid rgba(34,211,238,0.2)", borderRadius: 8 }} />
             <Bar dataKey="value" radius={[6, 6, 0, 0]}>
-              {successData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
+              {successData.map((entry, i) => <Cell key={i} fill={PROJECT_COLORS[entry.name]} />)}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -69,9 +74,9 @@ export default function ProjectStats() {
             <YAxis stroke="#8ea3b8" fontSize={11} />
             <Tooltip contentStyle={{ background: "#0d1424", border: "1px solid rgba(34,211,238,0.2)", borderRadius: 8 }} />
             <Legend wrapperStyle={{ fontSize: 11 }} />
-            <Line type="monotone" dataKey="Scholaria" stroke="#22d3ee" strokeWidth={3} dot={{ r: 4 }} />
-            <Line type="monotone" dataKey="Lunora" stroke="#5b9bf7" strokeWidth={3} dot={{ r: 4 }} />
-            <Line type="monotone" dataKey="Samumli" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="Scholaria" stroke={PROJECT_COLORS.Scholaria} strokeWidth={3} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="Lunora" stroke={PROJECT_COLORS.Lunora} strokeWidth={3} dot={{ r: 4 }} />
+            <Line type="monotone" dataKey="Samumli" stroke={PROJECT_COLORS.Samumli} strokeWidth={3} dot={{ r: 4 }} />
           </LineChart>
         </ResponsiveContainer>
       </ChartCard>
