@@ -1,4 +1,5 @@
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
+import { PROJECT_COLORS } from "../lib/projectColors";
 
 const progressData = [
   { t: "0%", Scholaria: 0, Lunora: 0, Samumli: 0 },
@@ -20,13 +21,6 @@ const timeData = [
   { name: "Lunora (3 mois)", value: 90 },
   { name: "Samumli (1 an)", value: 365 },
 ];
-
-// Couleurs de marque réelles de chaque projet (extraites de leurs logos respectifs)
-const PROJECT_COLORS: Record<string, string> = {
-  Scholaria: "#5B3FD6", // indigo-violet du logo Scholaria
-  Lunora: "#C08A6B",    // rose gold du logo Lunora
-  Samumli: "#1450F0",   // bleu vif du logo Samumli
-};
 
 function ChartCard({ title, children, className }: { title: string; children: React.ReactNode; className?: string }) {
   return (

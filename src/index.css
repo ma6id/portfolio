@@ -99,6 +99,14 @@ html.light .glass {
   box-shadow: 0 20px 50px -20px rgba(34, 211, 238, 0.25);
 }
 
+.glass-hover.has-accent {
+  border-color: var(--card-border);
+}
+.glass-hover.has-accent:hover {
+  border-color: var(--card-border-hover);
+  box-shadow: 0 20px 50px -20px var(--card-shadow-hover);
+}
+
 @keyframes fade-up {
   0% {
     opacity: 0;
