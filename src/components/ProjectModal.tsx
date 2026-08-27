@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { ExternalLink, Github, X } from "lucide-react";
 import type { Project } from "../content/fr";
+import { PROJECT_COLORS, hexToRgbTriplet } from "../lib/projectColors";
 import TechChip from "./TechChip";
 
 export default function ProjectModal({
@@ -22,6 +23,11 @@ export default function ProjectModal({
 
   const [awardOpen, setAwardOpen] = useState(false);
 
+  const brand = PROJECT_COLORS[project.name];
+  const modalStyle = brand
+    ? ({ ["--modal-tint" as string]: hexToRgbTriplet(brand) } as CSSProperties)
+    : undefined;
+
   return (
     <div
       className="fixed inset-0 z-[100] bg-ink-950/80 backdrop-blur-sm flex items-start sm:items-center justify-center p-0 sm:p-6"
@@ -31,7 +37,8 @@ export default function ProjectModal({
       aria-label={project.name}
     >
       <div
-        className="glass w-full sm:max-w-3xl sm:rounded-3xl rounded-none h-screen sm:h-auto sm:max-h-[85vh] my-0 sm:my-8 flex flex-col overflow-hidden"
+        className={`glass w-full sm:max-w-3xl sm:rounded-3xl rounded-none h-screen sm:h-auto sm:max-h-[85vh] my-0 sm:my-8 flex flex-col overflow-hidden ${brand ? "has-modal-accent" : ""}`}
+        style={modalStyle}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="shrink-0 flex items-center justify-between px-6 sm:px-8 py-5 border-b border-mist-500/10 bg-ink-950 sm:rounded-t-3xl">

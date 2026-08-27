@@ -15,3 +15,14 @@ export const PROJECT_TEXT_COLORS: Record<string, string> = {
   Lunora: "#C08A6B",
   Samumli: "#4F7CF4",
 };
+
+// Convertit un hex ("#5B3FD6") en triplet "R G B" (ex. "91 63 214"),
+// pour l'utiliser dans rgb(var(--x) / alpha) — permet de faire varier
+// l'opacité en CSS pur sans dépendre de color-mix().
+export function hexToRgbTriplet(hex: string): string {
+  const clean = hex.replace("#", "");
+  const r = parseInt(clean.slice(0, 2), 16);
+  const g = parseInt(clean.slice(2, 4), 16);
+  const b = parseInt(clean.slice(4, 6), 16);
+  return `${r} ${g} ${b}`;
+}

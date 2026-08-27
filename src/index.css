@@ -90,6 +90,17 @@ html.light .glass {
   border: 1px solid rgba(59,130,246,0.14);
 }
 
+.glass.has-modal-accent {
+  background:
+    linear-gradient(180deg, rgb(var(--modal-tint) / 0.18), rgb(var(--modal-tint) / 0.08)),
+    linear-gradient(180deg, rgba(19,28,44,0.55), rgba(13,20,32,0.55));
+}
+html.light .glass.has-modal-accent {
+  background:
+    linear-gradient(180deg, rgb(var(--modal-tint) / 0.14), rgb(var(--modal-tint) / 0.06)),
+    linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.65));
+}
+
 .glass-hover {
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, background-color 0.15s ease;
 }
