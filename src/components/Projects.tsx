@@ -23,6 +23,7 @@ const getProjectCardStyle = (projectName: string): CSSProperties => {
     ["--card-border" as string]: base,
     ["--card-border-hover" as string]: base,
     ["--card-shadow-hover" as string]: `${base}33`,
+    ["--card-active-bg" as string]: `${base}80`,
   } as CSSProperties;
 };
 
