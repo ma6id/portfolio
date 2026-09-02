@@ -39,26 +39,25 @@ export default function Gallery() {
           <ToolsBadge tools={sectionTools.identite} />
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
           {galleryItems.map((item, i) => (
-            <Reveal key={item.title + i} delay={(i % 6) * 70}>
+            <Reveal key={item.title + i} delay={(i % 8) * 50}>
               <button
                 onClick={() => setIndex(i)}
-                className="group text-left w-full glass glass-hover rounded-2xl overflow-hidden focus-ring"
+                className="group text-left w-full glass glass-hover rounded-xl overflow-hidden focus-ring"
               >
-                <div className="aspect-[4/3] bg-ink-800/70 flex items-center justify-center p-8">
+                <div className="aspect-square bg-ink-800/70 flex items-center justify-center p-4">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="px-5 py-4 flex items-center justify-between border-t border-mist-500/10">
-                  <div>
-                    <p className="text-sm font-medium text-mist-100">{item.title}</p>
-                    {item.subtitle && <p className="text-xs text-mist-500 mt-0.5">{item.subtitle}</p>}
-                  </div>
-                  <span className="chip">{item.tag}</span>
+                <div className="px-3 py-2.5 border-t border-mist-500/10">
+                  <p className="text-xs font-medium text-mist-100 truncate">{item.title}</p>
+                  {item.subtitle && (
+                    <p className="text-[10px] text-mist-500 truncate mt-0.5">{item.subtitle}</p>
+                  )}
                 </div>
               </button>
             </Reveal>
